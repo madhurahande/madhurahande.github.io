@@ -1,3 +1,53 @@
+// (function ($) {
+//   "use strict";
+
+//   var nav = $('nav');
+//   var navHeight = nav.outerHeight();
+
+//   // Mobile nav toggle
+//   $('.mobile-nav-toggle').on('click', function() {
+//     $('#navbar').toggleClass('navbar-mobile');
+//     $(this).toggleClass('bi-list bi-x');
+//   });
+
+//   // Smooth scroll for navbar links
+//   $('a.nav-link[href^="#"]').on('click', function(e) {
+//     e.preventDefault();
+//     var target = $(this.hash);
+//     if (target.length) {
+//       var scrollTo = target.offset().top - navHeight;
+//       $('html, body').animate({
+//         scrollTop: scrollTo
+//       }, 1000, 'easeInOutExpo');
+
+//       // Update active class
+//       $('.nav-link').removeClass('active');
+//       $(this).addClass('active');
+
+//       // Close mobile menu if open
+//       if ($('#navbar').hasClass('navbar-mobile')) {
+//         $('#navbar').removeClass('navbar-mobile');
+//         $('.mobile-nav-toggle').toggleClass('bi-list bi-x');
+//       }
+//     }
+//   });
+
+//   // Highlight active section on scroll
+//   $(window).on('scroll', function() {
+//     var scrollPos = $(window).scrollTop() + navHeight;
+//     $('section').each(function() {
+//       var top = $(this).offset().top;
+//       var bottom = top + $(this).outerHeight();
+
+//       if (scrollPos >= top && scrollPos <= bottom) {
+//         $('.nav-link').removeClass('active');
+//         $('a.nav-link[href="#' + $(this).attr('id') + '"]').addClass('active');
+//       }
+//     });
+//   });
+
+// })(jQuery);
+
 /**
 * Template Name: Personal - v4.10.0
 * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
@@ -168,7 +218,8 @@
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
-      clickable: true
+      clickable: true,
+      scroll:true
     },
     breakpoints: {
       320: {
@@ -240,7 +291,8 @@
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
-      clickable: true
+      clickable: true,
+      scroll:true
     }
   });
 

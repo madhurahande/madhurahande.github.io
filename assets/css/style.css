@@ -19,7 +19,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #040404 url("../img/bg1.jpg") top right no-repeat;
+  background: #040404 url("../img/bg4.jpg") top right no-repeat;
   background-size: cover;
   left: 0;
   right: 0;
@@ -654,18 +654,18 @@ section .container {
 .resume .resume-item h5 {
   font-size: 16px;
   background: rgba(255, 255, 255, 0.15);
-  padding: 5px 15px;
+  padding: 5px 20px;
   display: inline-block;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
 .resume .resume-item ul {
-  padding-left: 20px;
+  padding-left: 60px;
 }
 
 .resume .resume-item ul li {
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 .resume .resume-item:last-child {
