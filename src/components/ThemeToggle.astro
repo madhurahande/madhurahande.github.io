@@ -1,0 +1,44 @@
+<button class="theme-toggle" type="button" aria-label="Toggle color theme">
+  <span class="icon sun" aria-hidden="true">☀</span>
+  <span class="icon moon" aria-hidden="true">☾</span>
+</button>
+
+<script>
+  const button = document.querySelector('.theme-toggle');
+  const root = document.documentElement;
+
+  function setTheme(theme: 'light' | 'dark') {
+    root.dataset.theme = theme;
+    localStorage.setItem('theme', theme);
+  }
+
+  button?.addEventListener('click', () => {
+    const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    setTheme(next);
+  });
+</script>
+
+<style>
+  .theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--bg-elevated);
+    color: var(--text);
+    cursor: pointer;
+  }
+
+  .icon {
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  :global([data-theme='light']) .moon,
+  :global([data-theme='dark']) .sun {
+    display: none;
+  }
+</style>

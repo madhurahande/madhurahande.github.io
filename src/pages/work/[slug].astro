@@ -1,0 +1,130 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { projects, getProject, categoryLabels } from '../../data/projects';
+
+export function getStaticPaths() {
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const project = getProject(slug!);
+
+if (!project) {
+  return Astro.redirect('/');
+}
+---
+
+<BaseLayout title={`${project.title} | Madhura Hande Deshmukh`} description={project.summary}>
+  <article class="case-study section">
+    <div class="container case-container">
+      <a class="back-link" href="/#work">← Back to work</a>
+
+      <header class="case-header">
+        <p class="section-label">{categoryLabels[project.category]}</p>
+        <h1>{project.title}</h1>
+        <p class="case-summary">{project.summary}</p>
+        <div class="case-meta">
+          {project.organization && <span>{project.organization}</span>}
+          {project.year && <span>{project.year}</span>}
+        </div>
+        <ul class="tag-list">
+          {project.tags.map((tag) => (
+            <li><span class="chip">{tag}</span></li>
+          ))}
+        </ul>
+      </header>
+
+      {project.image && (
+        <figure class="case-image card">
+          <img src={project.image} alt={project.title} />
+        </figure>
+      )}
+
+      <section class="case-body card">
+        <h2>Overview</h2>
+        <ul>
+          {project.highlights.map((point) => (
+            <li>{point}</li>
+          ))}
+        </ul>
+        {project.category === 'medical' && (
+          <p class="disclaimer">
+            Project descriptions reflect firmware engineering work. Device imagery and proprietary
+            implementation details are omitted.
+          </p>
+        )}
+      </section>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .case-container {
+    max-width: 820px;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+
+  .case-header h1 {
+    margin: 0 0 0.75rem;
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    letter-spacing: -0.03em;
+  }
+
+  .case-summary {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin: 0 0 1rem;
+  }
+
+  .case-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .case-image {
+    overflow: hidden;
+    margin: 1.5rem 0;
+  }
+
+  .case-image img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+  }
+
+  .case-body {
+    padding: 1.5rem;
+  }
+
+  .case-body h2 {
+    margin-top: 0;
+  }
+
+  .case-body ul {
+    padding-left: 1.1rem;
+    color: var(--text-muted);
+    display: grid;
+    gap: 0.65rem;
+  }
+
+  .disclaimer {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 12px;
+    background: var(--accent-soft);
+    color: var(--text-muted);
+    font-size: 0.92rem;
+  }
+</style>

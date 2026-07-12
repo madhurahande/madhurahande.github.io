@@ -1,0 +1,90 @@
+---
+import { researchInterests } from '../data/experience';
+import { site } from '../data/site';
+---
+
+<section class="section research" id="research-interests">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label">Graduate Study</p>
+      <h2 class="section-title">Research interests for MS in ECE</h2>
+      <p class="section-subtitle">{site.gradSchoolNote}</p>
+    </div>
+
+    <div class="research-grid">
+      <div class="research-card card">
+        <h3>Research directions</h3>
+        <ul>
+          {researchInterests.map((interest) => (
+            <li>{interest}</li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="research-card card">
+        <h3>Why graduate school</h3>
+        <p>
+          My industry work on patient monitors showed me how much impact rigorous embedded systems
+          research can have in healthcare and robotics. I want to deepen my foundation in real-time
+          systems, control, and biomedical instrumentation through graduate study.
+        </p>
+        <p>
+          I am especially interested in programs that combine embedded systems, robotics, and
+          hardware–software co-design — building on my BE in Instrumentation & Control and
+          safety-critical firmware experience at Noccarc.
+        </p>
+        <div class="research-tags">
+          <span class="chip">MS ECE</span>
+          <span class="chip">Embedded Systems</span>
+          <span class="chip">Robotics</span>
+          <span class="chip">Biomedical Instrumentation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .research {
+    background: color-mix(in srgb, var(--accent-soft) 35%, var(--bg));
+  }
+
+  .research-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .research-card {
+    padding: 1.5rem;
+  }
+
+  .research-card h3 {
+    margin-top: 0;
+  }
+
+  .research-card p,
+  .research-card li {
+    color: var(--text-muted);
+  }
+
+  .research-card ul {
+    margin: 0;
+    padding-left: 1.1rem;
+    display: grid;
+    gap: 0.65rem;
+  }
+
+  .research-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .research-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
