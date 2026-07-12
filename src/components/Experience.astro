@@ -5,61 +5,17 @@ import { experience, education } from '../data/experience';
 <section class="section" id="experience">
   <div class="container">
     <div class="section-header">
-      <p class="section-label">Experience & Education</p>
+      <p class="section-label">Engineering Journey</p>
       <h2 class="section-title">Industry experience and academic foundation</h2>
       <p class="section-subtitle">
-        Firmware engineering in regulated medical devices, robotics leadership, and a strong
-        instrumentation & control background from SPPU.
+        My journey has taken me from robotics competitions and industrial automation to developing embedded software for safety-critical medical devices, with each experience strengthening my understanding of reliable embedded systems.
+        <!-- Over the past two years, I've contributed to the development of embedded systems across medical devices, robotics, and automation. My work has focused on building reliable firmware, integrating hardware and software, improving signal quality, and solving complex engineering challenges. -->
       </p>
     </div>
 
     <div class="timeline-grid">
+    
       <div>
-        <h3 class="column-title">Experience</h3>
-        <div class="timeline">
-          {experience.map((item) => (
-            <article class="timeline-item card">
-              <div class="timeline-head">
-                {item.logo && <img src={item.logo} alt="" width="48" height="48" class="logo" />}
-                <div>
-                  <h4>{item.role}</h4>
-                  <p class="org">
-                    {item.companyUrl ? (
-                      <a href={item.companyUrl} target="_blank" rel="noreferrer">{item.company}</a>
-                    ) : (
-                      item.company
-                    )}
-                  </p>
-                  <p class="dates">{item.start} — {item.end}</p>
-                </div>
-              </div>
-              <ul>
-                {item.highlights.map((point) => (
-                  <li>{point}</li>
-                ))}
-              </ul>
-              {item.achievements && (
-                <div class="achievements">
-                  {item.achievements.map((achievement) => (
-                    <div class="achievement">
-                      <strong>{achievement.title}</strong>
-                      <span>{achievement.date}</span>
-                      {achievement.certificateUrl && (
-                        <a href={achievement.certificateUrl} target="_blank" rel="noreferrer">
-                          View certificate
-                        </a>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              )}
-            </article>
-          ))}
-        </div>
-      </div>
-
-      <div>
-        <h3 class="column-title">Education</h3>
         <div class="timeline">
           {education.map((item) => (
             <article class="timeline-item card">
@@ -103,7 +59,48 @@ import { experience, education } from '../data/experience';
             </article>
           ))}
         </div>
+        <div class="timeline">
+          {experience.map((item) => (
+            <article class="timeline-item card">
+              <div class="timeline-head">
+                {item.logo && <img src={item.logo} alt="" width="48" height="48" class="logo" />}
+                <div>
+                  <h4>{item.role}</h4>
+                  <p class="org">
+                    {item.companyUrl ? (
+                      <a href={item.companyUrl} target="_blank" rel="noreferrer">{item.company}</a>
+                    ) : (
+                      item.company
+                    )}
+                  </p>
+                  <p class="dates">{item.start} — {item.end}</p>
+                </div>
+              </div>
+              <ul>
+                {item.highlights.map((point) => (
+                  <li>{point}</li>
+                ))}
+              </ul>
+              {item.achievements && (
+                <div class="achievements">
+                  {item.achievements.map((achievement) => (
+                    <div class="achievement">
+                      <strong>{achievement.title}</strong>
+                      <span>{achievement.date}</span>
+                      {achievement.certificateUrl && (
+                        <a href={achievement.certificateUrl} target="_blank" rel="noreferrer">
+                          View certificate
+                        </a>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </article>
+          ))}
+        </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -111,8 +108,8 @@ import { experience, education } from '../data/experience';
 <style>
   .timeline-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1rem;
   }
 
   .column-title {

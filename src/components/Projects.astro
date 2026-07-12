@@ -9,14 +9,13 @@ const filters: Array<{ id: 'all' | ProjectCategory; label: string }> = [
 ];
 ---
 
-<section class="section" id="work">
+<section class="section" id="projects">
   <div class="container">
     <div class="section-header">
-      <p class="section-label">Work</p>
+      <p class="section-label">Engineering</p>
       <h2 class="section-title">Medical firmware, robotics, and embedded systems</h2>
       <p class="section-subtitle">
-        Selected projects spanning safety-critical medical modules, national robotics competitions,
-        and academic embedded systems work.
+        Selected projects spanning safety-critical medical modules, national robotics competitions and academic projects.
       </p>
     </div>
 
@@ -41,11 +40,11 @@ const filters: Array<{ id: 'all' | ProjectCategory; label: string }> = [
           data-category={project.category}
         >
           {project.image ? (
-            <a href={`/work/${project.slug}`} class="project-image">
+            <a href={`/projects/${project.slug}`} class="project-image">
               <img src={project.image} alt="" loading="lazy" />
             </a>
           ) : (
-            <a href={`/work/${project.slug}`} class="project-image project-image--placeholder">
+            <a href={`/projects/${project.slug}`} class="project-image project-image--placeholder">
               <span>{project.organization?.charAt(0) ?? 'P'}</span>
             </a>
           )}
@@ -54,14 +53,14 @@ const filters: Array<{ id: 'all' | ProjectCategory; label: string }> = [
               <span class="chip">{categoryLabels[project.category]}</span>
               {project.featured && <span class="featured-badge">Featured</span>}
             </div>
-            <h3><a href={`/work/${project.slug}`}>{project.title}</a></h3>
+            <h3><a href={`/projects/${project.slug}`}>{project.title}</a></h3>
             <p>{project.summary}</p>
             <ul class="tag-list">
               {project.tags.slice(0, 4).map((tag) => (
                 <li><span class="chip">{tag}</span></li>
               ))}
             </ul>
-            <a class="project-link" href={`/work/${project.slug}`}>Read case study →</a>
+            <a class="project-link" href={`/projects/${project.slug}`}>Read case study →</a>
           </div>
         </article>
       ))}
@@ -150,8 +149,8 @@ const filters: Array<{ id: 'all' | ProjectCategory; label: string }> = [
 
   .project-image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
   }
 
   .project-image--placeholder {
