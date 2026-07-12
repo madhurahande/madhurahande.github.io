@@ -11,47 +11,6 @@ export interface ExperienceItem {
 
 export const experience: ExperienceItem[] = [
   {
-    role: 'Embedded Software Engineer',
-    company: 'Noccarc Robotics',
-    companyUrl: 'https://www.noccarc.com/',
-    logo: '/img/noccarc_logo.jpeg',
-    start: 'July 2024',
-    end: 'Present',
-    highlights: [
-      'Developed and optimized embedded firmware for patient monitors and ventilators, ensuring compliance with IEC medical standards.',
-      'Designed scalable, modular firmware architecture for easy integration of new features and future upgrades.',
-      'Engineered real-time data acquisition for NIBP, IBP, ECG, temperature, and capnography modules.',
-      'Conducted hardware–software integration testing, reducing system errors by 30% through rigorous validation.',
-      'Implemented UART, SPI, and I2C communication protocols for real-time sensor data processing.',
-    ],
-  },
-  {
-    role: 'Embedded Systems Intern',
-    company: 'Noccarc Robotics',
-    companyUrl: 'https://www.noccarc.com/',
-    logo: '/img/noccarc_logo.jpeg',
-    start: 'October 2023',
-    end: 'July 2024',
-    highlights: [
-      'Developed physiological monitoring algorithms achieving 98% accuracy with 2% deviation.',
-      'Designed automated PCB test fixtures, improving test coverage and reducing manual effort by 70%.',
-      'Contributed to prototype firmware with medical-grade sensor calibration and data processing.',
-      'Validated hardware using oscilloscopes, logic analyzers, and JTAG tools.',
-    ],
-  },
-  {
-    role: 'Engineering Intern',
-    company: 'MNC Automation and Services India Pvt Ltd',
-    companyUrl: 'https://www.linkedin.com/company/mncas/',
-    logo: '/img/mncas_logo.jpeg',
-    start: 'January 2022',
-    end: 'March 2022',
-    highlights: [
-      'Designed and tested industrial control panels and PLC-based automation systems.',
-      'Developed ladder logic for automated manufacturing systems.',
-    ],
-  },
-  {
     role: 'Team Member',
     company: 'Robotics Research Lab, GCOEARA',
     companyUrl: 'https://rrlgcoeara.in/',
@@ -73,6 +32,48 @@ export const experience: ExperienceItem[] = [
         date: 'October 2020',
         certificateUrl: '/img/certificates/Robocon2020.jpeg',
       },
+    ],
+  },
+  {
+    role: 'Engineering Intern',
+    company: 'MNC Automation and Services India Pvt Ltd',
+    companyUrl: 'https://www.linkedin.com/company/mncas/',
+    logo: '/img/mncas_logo.jpeg',
+    start: 'January 2022',
+    end: 'March 2022',
+    highlights: [
+      'Designed and tested industrial control panels and PLC-based automation systems.',
+      'Developed ladder logic for automated manufacturing systems.',
+    ],
+  },
+  {
+    role: 'Embedded Systems Intern',
+    company: 'Noccarc Robotics',
+    companyUrl: 'https://www.noccarc.com/',
+    logo: '/img/noccarc_logo.jpeg',
+    start: 'October 2023',
+    end: 'July 2024',
+    highlights: [
+      'Developed physiological monitoring algorithms achieving 98% accuracy with 2% deviation.',
+      'Designed automated PCB test fixtures, improving test coverage and reducing manual effort by 70%.',
+      'Contributed to prototype firmware with medical-grade sensor calibration and data processing.',
+      'Validated hardware using oscilloscopes, logic analyzers, and JTAG tools.',
+    ],
+  },
+  {
+    
+    role: 'Embedded Software Engineer',
+    company: 'Noccarc Robotics',
+    companyUrl: 'https://www.noccarc.com/',
+    logo: '/img/noccarc_logo.jpeg',
+    start: 'July 2024',
+    end: 'Present',
+    highlights: [
+      'Developed and optimized embedded firmware for patient monitors and ventilators, ensuring compliance with IEC medical standards.',
+      'Designed scalable, modular firmware architecture for easy integration of new features and future upgrades.',
+      'Engineered real-time data acquisition for NIBP, IBP, ECG, temperature, and capnography modules.',
+      'Conducted hardware–software integration testing, reducing system errors by 30% through rigorous validation.',
+      'Implemented UART, SPI, and I2C communication protocols for real-time sensor data processing.',
     ],
   },
 ];
@@ -112,6 +113,129 @@ export const education: EducationItem[] = [
       },
     ],
   },
+];
+
+export interface JourneyItem {
+  year: string;
+  title: string;
+  subtitle: string;
+  logo?: string;
+  description: string;
+  lessons: string;
+  achievements?: {
+    title: string;
+    certificateUrl?: string;
+  }[];
+}
+
+export const journey: JourneyItem[] = [
+  {
+    year: "2019",
+
+    title: "Bachelor of Engineering",
+    subtitle:
+      "Government College of Engineering & Research, Pune",
+
+    logo: "/img/govt-college-logo.png",
+
+    description:
+      "Started my journey in Instrumentation & Control Engineering, building a strong foundation in electronics, control systems, embedded programming, sensors, and instrumentation.",
+
+    lessons:
+      "Discovered my interest in embedded systems by understanding how software interacts with physical hardware.",
+
+    achievements: [
+      {
+        title: "SPPU Rank 10"
+      }
+    ]
+  },
+
+  {
+    year: "2019–2021",
+
+    title: "Robotics Research Lab",
+
+    subtitle:
+      "DD Robocon",
+
+    logo:
+      "/img/robotics_research_lab_logo.jpeg",
+
+    description:
+      "Worked on competition robotics, embedded firmware, custom PCBs, motor control, and multidisciplinary system integration while participating in two national Robocon seasons.",
+
+    lessons:
+      "Learned systems thinking, rapid prototyping, and how embedded software, electronics, and mechanics come together to build real robots.",
+
+    achievements: [
+      {
+        title: "AIR 14 — DD Robocon 2020"
+      },
+      {
+        title: "AIR 6 — DD Robocon 2021"
+      }
+    ]
+  },
+
+  {
+    year: "2022",
+
+    title:
+      "Engineering Intern",
+
+    subtitle:
+      "MNC Automation",
+
+    logo:
+      "/img/mncas_logo.jpeg",
+
+    description:
+      "Designed industrial control panels, PLC-based automation systems, and ladder logic for manufacturing applications.",
+
+    lessons:
+      "Developed an appreciation for industrial automation and practical control systems."
+  },
+
+  {
+    year:
+      "2023",
+
+    title:
+      "Embedded Software Intern",
+
+    subtitle:
+      "Noccarc Robotics",
+
+    logo:
+      "/img/noccarc_logo.jpeg",
+
+    description:
+      "Transitioned into medical device firmware development, contributing to patient monitors, ventilators, and manufacturing validation.",
+
+    lessons:
+      "Learned the discipline required to develop reliable software for safety-critical embedded systems."
+  },
+
+  {
+    year:
+      "2024–Present",
+
+    title:
+      "Embedded Systems Engineer",
+
+    subtitle:
+      "Noccarc Robotics",
+
+    logo:
+      "/img/noccarc_logo.jpeg",
+
+    description:
+      "Leading firmware development across multiple medical device platforms including Patient Monitor NX5, Ventilator V730i, and Humidifier RH07, with responsibilities spanning firmware architecture, clinical algorithms, hardware integration, debugging, and validation.",
+
+    lessons:
+      "Gained confidence in owning complete embedded systems while balancing reliability, maintainability, and product delivery."
+  }
 ];
 
 export const skillGroups = [

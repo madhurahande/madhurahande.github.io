@@ -19,7 +19,7 @@ if (!project) {
 <BaseLayout title={`${project.title} | Madhura Hande Deshmukh`} description={project.summary}>
   <article class="case-study section">
     <div class="container case-container">
-      <a class="back-link" href="/#work">← Back to work</a>
+      <a class="back-link" href="/#projects">← Back to projects</a>
 
       <header class="case-header">
         <p class="section-label">{categoryLabels[project.category]}</p>
@@ -43,12 +43,104 @@ if (!project) {
       )}
 
       <section class="case-body card">
-        <h2>Overview</h2>
-        <ul>
-          {project.highlights.map((point) => (
-            <li>{point}</li>
-          ))}
-        </ul>
+      <h2>Overview</h2>
+      <p>{project.overview}</p>
+      
+      <h2>My Role</h2>
+      <ul>
+        {project.role.map((item) => (
+          <ul>{item}</ul>
+        ))}
+      </ul>
+      
+      <h2>Engineering Highlights</h2>
+
+      <ul>
+        {project.engineeringHighlights.map((item) => (
+          <ul><li>{item}</li></ul>
+        ))}
+          </ul>
+          
+      <h2>Challenges</h2>
+
+      <ul>
+        {project.challenges.map((item) => (
+          <ul>{item}</ul>
+        ))}
+      </ul>
+    
+    <h2>Impact</h2>
+
+    <ul>
+      {project.impact.map((item) => (
+        <ul>{item}</ul>
+      ))}
+    </ul>
+
+    <h2>What I learned</h2>
+
+    <ul>
+      {project.learnings.map((item) => (
+        <ul>{item}</ul>
+      ))}
+    </ul>
+    </section>
+
+    <section class="case-body card">
+  <h2>Technologies</h2>
+
+  <div class="tech-grid">
+  <!--
+    <div>
+      <h3>Languages</h3>
+      <ul class="tag-list">
+        {project.technologies.languages.map((item) => (
+          <li><span class="chip">{item}</span></li>
+        ))}
+      </ul>
+    </div>
+
+    <div>
+      <h3>Microcontrollers</h3>
+      <ul class="tag-list">
+        {project.technologies.microcontrollers.map((item) => (
+          <li><span class="chip">{item}</span></li>
+        ))}
+      </ul>
+    </div>
+
+    <div>
+      <h3>Communication</h3>
+      <ul class="tag-list">
+        {project.technologies.protocols.map((item) => (
+          <li><span class="chip">{item}</span></li>
+        ))}
+      </ul>
+    </div>
+
+    <div>
+      <h3>Tools</h3>
+      <ul class="tag-list">
+        {project.technologies.tools.map((item) => (
+          <li><span class="chip">{item}</span></li>
+        ))}
+      </ul>
+    </div>
+    -->
+    <div>
+      <!--<h3>Concepts</h3>-->
+      <ul class="tag-list">
+        {project.technologies.concepts.map((item) => (
+          <li><span class="chip">{item}</span></li>
+        ))}
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+      <section class="case-body card">
+       
         {project.category === 'medical' && (
           <p class="disclaimer">
             Project descriptions reflect firmware engineering work. Device imagery and proprietary
@@ -92,17 +184,24 @@ if (!project) {
     font-size: 0.85rem;
     margin-bottom: 1rem;
   }
+  
+.case-image {
+    margin: 2rem 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-  .case-image {
-    overflow: hidden;
-    margin: 1.5rem 0;
-  }
-
-  .case-image img {
+.case-image img {
     width: 100%;
-    max-height: 420px;
-    object-fit: cover;
-  }
+    max-width: 800px;
+    max-height: 500px;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+}
 
   .case-body {
     padding: 1.5rem;

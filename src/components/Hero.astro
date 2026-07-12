@@ -5,27 +5,31 @@ import { site } from '../data/site';
 <section class="hero section" id="top">
   <div class="container hero-grid">
     <div class="hero-copy">
-      <p class="hero-eyebrow">{site.gradSchoolNote}</p>
       <h1>{site.name}</h1>
       <p class="hero-tagline">{site.heroTagline}</p>
-      <p class="hero-pitch">{site.heroPitch}</p>
+      <p class="hero-eyebrow">{site.gradSchoolNote}</p>
+      <div class="hero-pitch">
+      {site.heroPitch.map((paragraph) => (
+      <p>{paragraph}</p>
+      ))}
+      </div>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#work">View my work</a>
+        <a class="btn btn-primary" href="#work">Explore my work</a>
         <a class="btn btn-secondary" href={site.resumePath} download>Download resume</a>
         <a class="btn btn-secondary" href="#contact">Get in touch</a>
       </div>
       <div class="hero-stats">
         <div>
-          <strong>{site.stats.projects}+</strong>
-          <span>Projects</span>
+          <strong>{site.stats.IndustryExperienceYears}+</strong>
+          <span>Industry Experience </span>
         </div>
         <div>
-          <strong>{site.stats.experienceMonths}+</strong>
-          <span>Months experience</span>
+          <strong>{site.stats.UniversityRank}</strong>
+          <span>University Rank</span>
         </div>
         <div>
-          <strong>BE I&C</strong>
-          <span>SPPU · 8.74 CGPA</span>
+          <strong>{site.stats.ABURoboconRank}</strong>
+          <span>ABU Robocon AIR</span>
         </div>
       </div>
     </div>
@@ -72,11 +76,20 @@ import { site } from '../data/site';
     font-weight: 600;
     margin: 0 0 1rem;
   }
-
+  
   .hero-pitch {
+    max-width: 40rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-pitch p {
     color: var(--text-muted);
-    max-width: 38rem;
-    margin: 0 0 1.75rem;
+    margin: 0 0 1rem;
+    line-height: 1.75;
+  }
+
+  .hero-pitch p:last-child {
+    margin-bottom: 0;
   }
 
   .hero-actions {
