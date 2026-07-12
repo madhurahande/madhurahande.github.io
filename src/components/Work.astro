@@ -1,0 +1,219 @@
+---
+import { projects, categoryLabels, type ProjectCategory } from '../data/projects';
+
+const filters: Array<{ id: 'all' | ProjectCategory; label: string }> = [
+  { id: 'all', label: 'All' },
+  { id: 'medical', label: categoryLabels.medical },
+  { id: 'robotics', label: categoryLabels.robotics },
+  { id: 'academic', label: categoryLabels.academic },
+];
+---
+
+<section class="section" id="work">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label">Work</p>
+      <h2 class="section-title">Medical firmware, robotics, and embedded systems</h2>
+      <p class="section-subtitle">
+        Selected projects spanning safety-critical medical modules, national robotics competitions,
+        and academic embedded systems work.
+      </p>
+    </div>
+
+    <div class="filters" role="tablist" aria-label="Filter projects">
+      {filters.map((filter, index) => (
+        <button
+          class={`filter-btn${index === 0 ? ' active' : ''}`}
+          type="button"
+          data-filter={filter.id}
+          role="tab"
+          aria-selected={index === 0 ? 'true' : 'false'}
+        >
+          {filter.label}
+        </button>
+      ))}
+    </div>
+
+    <div class="project-grid">
+      {projects.map((project) => (
+        <article
+          class={`project-card card${project.featured ? ' featured' : ''}`}
+          data-category={project.category}
+        >
+          {project.image ? (
+            <a href={`/work/${project.slug}`} class="project-image">
+              <img src={project.image} alt="" loading="lazy" />
+            </a>
+          ) : (
+            <a href={`/work/${project.slug}`} class="project-image project-image--placeholder">
+              <span>{project.organization?.charAt(0) ?? 'P'}</span>
+            </a>
+          )}
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="chip">{categoryLabels[project.category]}</span>
+              {project.featured && <span class="featured-badge">Featured</span>}
+            </div>
+            <h3><a href={`/work/${project.slug}`}>{project.title}</a></h3>
+            <p>{project.summary}</p>
+            <ul class="tag-list">
+              {project.tags.slice(0, 4).map((tag) => (
+                <li><span class="chip">{tag}</span></li>
+              ))}
+            </ul>
+            <a class="project-link" href={`/work/${project.slug}`}>Read case study →</a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  const buttons = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.project-card');
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const filter = button.getAttribute('data-filter');
+
+      buttons.forEach((btn) => {
+        btn.classList.remove('active');
+        btn.setAttribute('aria-selected', 'false');
+      });
+      button.classList.add('active');
+      button.setAttribute('aria-selected', 'true');
+
+      cards.forEach((card) => {
+        const category = card.getAttribute('data-category');
+        const show = filter === 'all' || category === filter;
+        card.classList.toggle('hidden', !show);
+      });
+    });
+  });
+</script>
+
+<style>
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .filter-btn {
+    border: 1px solid var(--border);
+    background: var(--bg-elevated);
+    color: var(--text-muted);
+    border-radius: 999px;
+    padding: 0.55rem 1rem;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  .filter-btn.active {
+    background: var(--accent-soft);
+    color: var(--accent-strong);
+    border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.15s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-3px);
+  }
+
+  .project-card.hidden {
+    display: none;
+  }
+
+  .project-card.featured {
+    border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+  }
+
+  .project-image {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: var(--bg-muted);
+  }
+
+  .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .project-image--placeholder {
+    display: grid;
+    place-items: center;
+    color: var(--accent-strong);
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .project-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex: 1;
+  }
+
+  .project-body h3 {
+    margin: 0;
+    font-size: 1.05rem;
+  }
+
+  .project-body h3 a {
+    color: var(--text);
+  }
+
+  .project-body p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    flex: 1;
+  }
+
+  .project-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .featured-badge {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent-strong);
+  }
+
+  .project-link {
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 960px) {
+    .project-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 640px) {
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

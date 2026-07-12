@@ -1,0 +1,119 @@
+---
+import { site } from '../data/site';
+import { skillGroups, languages } from '../data/experience';
+---
+
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label">About</p>
+      <h2 class="section-title">Embedded systems engineer with a research mindset</h2>
+      <p class="section-subtitle">
+        I bridge hardware and software for safety-critical systems — from IEC-compliant patient
+        monitors to competition robotics — and I am preparing for graduate study in embedded systems
+        and robotics.
+      </p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-card card">
+        <h3>Background</h3>
+        <p>
+          Driven by embedded systems and biomedical technology, I specialize in real-time firmware
+          for patient monitoring, robotics, and automation. My work spans microcontrollers, sensor
+          integration, signal processing, and modular architectures for medical-grade devices.
+        </p>
+        <p>
+          At Noccarc Robotics, I develop firmware for patient monitors and ventilators. Previously,
+          I led robotics competition work at GCOEARA with national-level Robocon results.
+        </p>
+        <ul class="about-meta">
+          <li><span>Degree</span> BE Instrumentation & Control</li>
+          <li><span>Location</span> {site.location}</li>
+          <li><span>Email</span> <a href={`mailto:${site.email}`}>{site.email}</a></li>
+          <li><span>Phone</span> {site.phone}</li>
+        </ul>
+      </div>
+
+      <div class="skills-panel">
+        {skillGroups.map((group) => (
+          <div class="skill-group card">
+            <h3>{group.title}</h3>
+            <ul class="tag-list">
+              {group.skills.map((skill) => (
+                <li><span class="chip">{skill}</span></li>
+              ))}
+            </ul>
+          </div>
+        ))}
+
+        <div class="skill-group card">
+          <h3>Languages</h3>
+          <ul class="tag-list">
+            {languages.map((language) => (
+              <li><span class="chip">{language}</span></li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .about-card,
+  .skill-group {
+    padding: 1.5rem;
+  }
+
+  .about-card h3,
+  .skill-group h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  .about-card p {
+    color: var(--text-muted);
+  }
+
+  .about-meta {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .about-meta li {
+    display: grid;
+    grid-template-columns: 5.5rem 1fr;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .about-meta span {
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .skills-panel {
+    display: grid;
+    gap: 1rem;
+  }
+
+  @media (max-width: 900px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

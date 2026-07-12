@@ -1,0 +1,147 @@
+---
+import { site } from '../data/site';
+---
+
+<section class="hero section" id="top">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="hero-eyebrow">{site.gradSchoolNote}</p>
+      <h1>{site.name}</h1>
+      <p class="hero-tagline">{site.heroTagline}</p>
+      <p class="hero-pitch">{site.heroPitch}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#work">View my work</a>
+        <a class="btn btn-secondary" href={site.resumePath} download>Download resume</a>
+        <a class="btn btn-secondary" href="#contact">Get in touch</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <strong>{site.stats.projects}+</strong>
+          <span>Projects</span>
+        </div>
+        <div>
+          <strong>{site.stats.experienceMonths}+</strong>
+          <span>Months experience</span>
+        </div>
+        <div>
+          <strong>BE I&C</strong>
+          <span>SPPU · 8.74 CGPA</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual card">
+      <img src={site.profileImage} alt={`Portrait of ${site.name}`} width="480" height="560" />
+      <div class="hero-visual-caption">
+        <p>{site.location}</p>
+        <a href={site.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding-top: 3rem;
+    background: var(--hero-gradient);
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .hero-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--accent-strong);
+    margin: 0 0 1rem;
+    max-width: 36rem;
+  }
+
+  h1 {
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    margin: 0 0 0.75rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin: 0 0 1rem;
+  }
+
+  .hero-pitch {
+    color: var(--text-muted);
+    max-width: 38rem;
+    margin: 0 0 1.75rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .hero-stats div {
+    padding: 1rem;
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--bg-elevated) 80%, transparent);
+    border: 1px solid var(--border);
+  }
+
+  .hero-stats strong {
+    display: block;
+    font-size: 1.1rem;
+  }
+
+  .hero-stats span {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+  }
+
+  .hero-visual {
+    overflow: hidden;
+  }
+
+  .hero-visual img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
+
+  .hero-visual-caption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 900px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-visual {
+      max-width: 420px;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .hero-stats {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
