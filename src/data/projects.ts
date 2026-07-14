@@ -37,12 +37,12 @@ export const projects: Project[] = [
     slug: 'patient-monitor',
     title: 'Patient Monitor NX5',
     summary:
-      'Real-time ECG signal acquisition and processing firmware with medical-grade accuracy.',
+      'A multi-parameter patient monitoring system for continuous real-time monitoring of vital physiological parameters in critical and general care environments.',
     category: 'medical',
     featured: true,
     organization: 'Noccarc Robotics',
     year: '2024 – 2026',
-    tags: ['IEC 60601', 'Signal Processing', 'STM32', 'Real-time'],
+    tags: ['IEC 60601', 'Real-Time Embedded System', 'Biomedical Signal Processing', 'Hardware-Software Integration', 'Modular Firmware Architecture', 'Medical Device Firmware', 'Battery Management System (BMS)', 'Power Management'],
     overview:
     'Patient Monitor NX5 is a next-generation multi-parameter patient monitoring system developed at Noccarc Robotics for continuous monitoring of vital physiological parameters in clinical environments. The system integrates multiple sensing modules—including ECG, Respiration, NIBP, SpO₂, Temperature, and Capnography—to provide accurate, real-time patient monitoring while meeting stringent medical device reliability and safety requirements.',
     role:[ 
@@ -88,12 +88,12 @@ export const projects: Project[] = [
     slug: 'ventilator',
     title: 'Ventilator V730i',
     summary:
-      'Real-time ECG signal acquisition and processing firmware with medical-grade accuracy.',
+      'A critical-care mechanical ventilator designed to provide precise respiratory support and continuous monitoring for patients requiring assisted ventilation.',
     category: 'medical',
     featured: true,
     organization: 'Noccarc Robotics',
-    year: '2024 – 2026',
-    tags: ['IEC 60601', 'Signal Processing', 'STM32', 'Real-time'],
+    year: '2024 – now',
+    tags: ['IEC 60601', 'Real-Time Embedded Systems', 'Volumetric Capnography', 'Hardware Integration', 'Medical Device Development', 'Power Distribution'],
     overview:
     'The Ventilator V730i is a critical-care mechanical ventilator designed to provide precise respiratory support across a wide range of clinical conditions. My work focused on firmware development for respiratory monitoring, embedded power management, and hardware validation, contributing to the reliability and safety of a life-support system.',
     role:[ 
@@ -133,12 +133,12 @@ export const projects: Project[] = [
     slug: 'humidifier',
     title: 'Humidifier RH07',
     summary:
-      'Real-time ECG signal acquisition and processing firmware with medical-grade accuracy.',
+      'A medical respiratory humidifier that delivers heated and humidified air to improve patient comfort and protect airways during oxygen therapy and mechanical ventilation.',
     category: 'medical',
     featured: true,
     organization: 'Noccarc Robotics',
     year: '2026',
-    tags: ['IEC 60601', 'Signal Processing', 'STM32', 'Real-time'],
+    tags: ['IEC 60601', 'Embedded Firmware', 'Closed-Loop Temperature Control', 'Sensor Integration', 'Hardware-Software Integration', 'Embedded System Validation', 'Medical Device Development'],
     overview:
     'Humidifier RH07 is a medical respiratory humidification system designed to deliver optimally heated and humidified air to patients undergoing respiratory therapy. The project involved developing embedded firmware for precise temperature regulation, sensor monitoring, user interaction, and reliable system operation while meeting the demands of a medical device development cycle.',
     role:[ 
@@ -201,7 +201,7 @@ export const projects: Project[] = [
     slug: 'robocon',
     title: 'DD Robocon Competition Robots',
     summary:
-      'Autonomous robots with omni-wheel/mecanum drive for theme-specific competition tasks.',
+      'Holonomic robots with omni-wheel/mecanum drive for theme-specific competition tasks.',
     category: 'robotics',
     image: [
       '/img/portfolio/rrl2019a.jpg',
@@ -209,7 +209,7 @@ export const projects: Project[] = [
     ],
     organization: 'Robotics Research Lab, GCOEARA',
     year: '2020 - 2021',
-    tags: ['Mecanum Drive', 'Autonomy', 'Competition'],
+    tags: ['Embedded system', 'Robotics', 'Holonomic Drive', 'Swerve Drive', 'PID Control','Path Planning'],
     // highlights: [
     //   'Assisted in designing autonomous robots with omni-wheel/mecanum drive for theme-specific tasks.',
     //   'Developed mechanism control systems for synchronized robotic movements, improving task execution accuracy.',
@@ -282,7 +282,7 @@ export const projects: Project[] = [
     ],
     organization: 'GCOEARA',
     year: '2022',
-    tags: ['EMG', 'Signal Processing', 'Prosthetics'],
+    tags: ['Embedded system', 'Biomedical signal processing', 'EMG signal Acquisition', 'Human - Machine Interaction', 'Motor Control'],
     // highlights: [
     //   'Developed a robotic prosthetic hand controlled by EMG signals, enabling intuitive muscle-based movement.',
     //   'Implemented signal processing techniques to filter and interpret EMG signals for individual finger control.',
@@ -338,7 +338,7 @@ export const projects: Project[] = [
     ],
     organization: 'GCOEARA',
     year: '2022',
-    tags: ['PID Control', 'Real-time', 'Embedded C'],
+    tags: [ 'Real-time control system', 'PID Control', 'Sensor Integration', 'Electromechanical Integration'],
     overview:
     "The Ball Balancing Robot is a dynamically stable mobile robot that balances on a single spherical wheel using closed-loop PID control. Developed as an interdisciplinary project between the Instrumentation & Control and Automobile Engineering departments, the robot continuously estimates its orientation using an IMU and applies real-time motor corrections to maintain stability under dynamic conditions.",
     role:[ 
