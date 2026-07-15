@@ -1,0 +1,114 @@
+---
+const interests = [
+  {
+    icon: "📚",
+    title: "Reading",
+    description:
+      "I enjoy reading books across engineering, history, psychology, philosophy and literature. Reading helps me explore new ideas, broaden my perspective, and continuously learn beyond my technical work.",
+  },
+
+  {
+    icon: "🏊",
+    title: "Sports",
+    description:
+      "Swimming, cycling and Taekwondo help me stay disciplined, patient and balanced. They remind me that progress comes through consistency rather than speed.",
+  },
+
+  {
+    icon: "✍️",
+    title: "Poetry",
+    description:
+      "I enjoy reading Marathi poetry and reflective writing. Literature helps me appreciate language, emotion and different perspectives beyond engineering.",
+  },
+];
+---
+
+<section class="section" id="beyond-engineering">
+
+<div class="container">
+
+<div class="section-header">
+
+<p class="section-label">
+
+Beyond Engineering
+
+</p>
+
+<h2 class="section-title">
+
+Curiosity extends beyond technology.
+
+</h2>
+
+<p class="section-subtitle">
+
+Many of the qualities I value as an engineer—creativity, patience, curiosity and continuous learning—are also shaped by the interests I pursue outside the lab.
+
+</p>
+
+</div>
+
+<!-- Rangoli -->
+
+<div class="rangoli card">
+
+<div class="rangoli-content">
+
+<div>
+
+<h3>🎨 Rangoli</h3>
+
+<p>
+
+Designing rangoli has taught me that creativity and precision often go hand in hand. Every design begins with symmetry, planning and iteration—the same mindset I enjoy bringing to engineering problems.
+
+</p>
+
+</div>
+
+<div class="rangoli-gallery">
+
+<img src="/img/rangoli/r1.jpeg" alt="Rangoli design">
+
+<img src="/img/rangoli/r2.jpeg" alt="Rangoli design">
+
+<img src="/img/rangoli/r4.jpeg" alt="Rangoli design">
+
+<img src="/img/rangoli/r5.jpeg" alt="Rangoli design">
+
+<img src="/img/rangoli/r6.jpeg" alt="Rangoli design">
+
+<img src="/img/rangoli/r7.jpeg" alt="Rangoli design">
+
+</div>
+
+</div>
+
+</div>
+
+<div class="interest-grid">
+
+{interests.map((interest)=>(
+
+<article class="interest-card card">
+
+<div class="interest-icon">
+
+{interest.icon}
+
+</div>
+
+<h3>{interest.title}</h3>
+
+<p>{interest.description}</p>
+
+</article>
+
+))}
+
+</div>
+
+</div>
+
+</section>

@@ -7,7 +7,11 @@ export interface Project {
   summary: string;
   category: ProjectCategory;
   featured?: boolean;
-  image?: string[];
+  // image?: string[];
+  images?: {
+  src: string;
+  caption?: string;
+  }[];
   organization?: string;
   year?: string;
   tags: string[];
@@ -39,6 +43,12 @@ export const projects: Project[] = [
     summary:
       'A multi-parameter patient monitoring system for continuous real-time monitoring of vital physiological parameters in critical and general care environments.',
     category: 'medical',
+    images: [
+      {src: '/img/portfolio/NX5.jpeg'},
+      {src: '/img/portfolio/NX5_1.jpg'},
+      {src: '/img/portfolio/NX5_2.jpg'},
+      // {src: '/img/portfolio/swerve2020.png'},
+    ],
     featured: true,
     organization: 'Noccarc Robotics',
     year: '2024 – 2026',
@@ -90,6 +100,11 @@ export const projects: Project[] = [
     summary:
       'A critical-care mechanical ventilator designed to provide precise respiratory support and continuous monitoring for patients requiring assisted ventilation.',
     category: 'medical',
+    images: [
+      {src: '/img/portfolio/Noccarc-V730i-ICU-Ventilator.jpg'},
+      {src: '/img/portfolio/V730i.jpg'},
+      // {src: '/img/portfolio/swerve2020.png'},
+    ],
     featured: true,
     organization: 'Noccarc Robotics',
     year: '2024 – now',
@@ -203,9 +218,11 @@ export const projects: Project[] = [
     summary:
       'Holonomic robots with omni-wheel/mecanum drive for theme-specific competition tasks.',
     category: 'robotics',
-    image: [
-      '/img/portfolio/rrl2019a.jpg',
-      '/img/portfolio/swerve2020.png',
+    images: [
+      {src: '/img/portfolio/rrl2019a.jpg'},
+      {src: '/img/portfolio/rrl2019b.jpg'},
+      {src: '/img/portfolio/swerve2020.png'},
+      {src: '/img/portfolio/mecanum2020.png'},
     ],
     organization: 'Robotics Research Lab, GCOEARA',
     year: '2020 - 2021',
@@ -277,8 +294,9 @@ export const projects: Project[] = [
     summary:
       'Muscle-controlled prosthetic hand using EMG signal processing for intuitive movement.',
     category: 'academic',
-    image: [
-      '/img/portfolio/Robotic_hand3.jpeg',
+    images: [
+      {src: '/img/portfolio/bionichand0.png'},
+      {src: '/img/portfolio/Robotic_hand3.jpeg'},
     ],
     organization: 'GCOEARA',
     year: '2022',
@@ -333,8 +351,9 @@ export const projects: Project[] = [
     summary:
       'Self-balancing robot with PID control for real-time stability on a spherical wheel.',
     category: 'academic',
-    image: [
-      '/img/portfolio/ballbot2.jpeg',
+    images: [
+      {src: '/img/portfolio/ballbot2.jpeg'},
+      {src: '/img/portfolio/ballbot.jpeg'},
     ],
     organization: 'GCOEARA',
     year: '2022',

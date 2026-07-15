@@ -36,11 +36,23 @@ if (!project) {
         </ul>
       </header>
 
-      {project.image && (
-        <figure class="case-image card">
-          <img src={project.image} alt={project.title} />
-        </figure>
-      )}
+      {project.images && project.images.length > 0 && (
+      <section class="case-gallery">
+        {project.images.map((image) => (
+          <figure class="gallery-item">
+            <img
+              src={image.src}
+              alt={image.caption ?? project.title}
+              loading="lazy"
+            />
+
+            {image.caption && (
+              <figcaption>{image.caption}</figcaption>
+            )}
+          </figure>
+        ))}
+      </section>
+    )}
 
       <section class="case-body card">
       <h2>Overview</h2>
@@ -87,7 +99,7 @@ if (!project) {
     </section>
 
  
-      <section class="case-body card">
+      <!-- <section class="case-body card">
        
         {project.category === 'medical' && (
           <p class="disclaimer">
@@ -95,7 +107,7 @@ if (!project) {
             implementation details are omitted.
           </p>
         )}
-      </section>
+      </section> -->
     </div>
   </article>
 </BaseLayout>
@@ -132,23 +144,54 @@ if (!project) {
     font-size: 0.85rem;
     margin-bottom: 1rem;
   }
-  
-.case-image {
-    margin: 2rem 0;
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .case-gallery {
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:1rem;
+
+    margin:2rem 0;
+
 }
 
-.case-image img {
-    width: 100%;
-    max-width: 800px;
-    max-height: 500px;
+.gallery-item{
 
-    object-fit: contain;
+    margin:0;
 
-    border-radius: 12px;
+}
+
+.gallery-item img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:contain;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+.gallery-item img:hover{
+
+    transform:scale(1.02);
+
+}
+
+.gallery-item figcaption{
+
+    text-align:center;
+
+    margin-top:.5rem;
+
+    color:var(--text-muted);
+
+    font-size:.9rem;
+
 }
 
   .case-body {

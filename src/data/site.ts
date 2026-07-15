@@ -58,6 +58,7 @@ export const navLinks = [
   { href: '#about', label: 'About' },
   { href: '#projects', label: 'Projects' },
   { href: '#experience', label: 'Engineering Journey' },
+  { href: '#beyond-engineering', label: 'Beyond Engineering' },
   { href: '#contact', label: 'Contact' },
 ];
 
