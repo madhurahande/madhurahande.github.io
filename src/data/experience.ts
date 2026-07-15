@@ -130,7 +130,7 @@ export interface JourneyItem {
 
 export const journey: JourneyItem[] = [
   {
-    year: "2019",
+    year: "2019 - 2023",
 
     title: "Bachelor of Engineering",
     subtitle:
@@ -146,9 +146,15 @@ export const journey: JourneyItem[] = [
 
     achievements: [
       {
-        title: "SPPU Rank 10"
-      }
-    ]
+        title: 'Rank 10 — SPPU I&C Department',
+        // date: 'June 2023',
+      },
+      {
+        title: 'Rank 2 — COEP I2I Competition',
+        // date: 'June 2022',
+        certificateUrl: '/img/certificates/COEP I2I competition.jpeg',
+      },
+    ],
   },
 
   {
@@ -170,12 +176,16 @@ export const journey: JourneyItem[] = [
 
     achievements: [
       {
-        title: "AIR 14 — DD Robocon 2020"
+        title: 'All India Rank 6 — DD Robocon',
+        // date: 'August 2021',
+        certificateUrl: '/img/certificates/Robocon2021.jpeg',
       },
       {
-        title: "AIR 6 — DD Robocon 2021"
-      }
-    ]
+        title: 'All India Rank 14 — DD Robocon',
+        // date: 'October 2020',
+        certificateUrl: '/img/certificates/Robocon2020.jpeg',
+      },
+    ],
   },
 
   {
@@ -237,6 +247,50 @@ export const journey: JourneyItem[] = [
       "Gained confidence in owning complete embedded systems while balancing reliability, maintainability, and product delivery."
   }
 ];
+
+// export const journey = [
+
+// {
+//   year: "2019",
+//   title: "Started BE in Instrumentation & Control Engineering",
+//   organization: "Government College of Engineering and Research",
+//   description:
+//     "Built a strong foundation in electronics, control systems, embedded programming and instrumentation."
+// },
+
+// {
+//   year: "2019",
+//   title: "Robotics Research Lab",
+//   organization: "DD Robocon",
+//   description:
+//     "Worked on embedded systems, PCB design, motor control and competition robotics."
+// },
+
+// {
+//   year: "2023",
+//   title: "Embedded Software Intern",
+//   organization: "Noccarc Robotics",
+//   description:
+//     "Started developing firmware for medical devices."
+// },
+
+// {
+//   year: "2024",
+//   title: "Firmware Engineer",
+//   organization: "Noccarc Robotics",
+//   description:
+//     "Expanded responsibilities across Patient Monitor, Ventilator and Humidifier development."
+// },
+
+// {
+//   year: "Present",
+//   title: "Embedded Systems Engineer",
+//   organization: "Noccarc Robotics",
+//   description:
+//     "Developing reliable embedded software for medical devices while preparing for graduate studies."
+// }
+
+// ]
 
 export const skillGroups = [
   {
