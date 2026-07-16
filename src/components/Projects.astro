@@ -39,9 +39,17 @@ const filters: Array<{ id: 'all' | ProjectCategory; label: string }> = [
           class={`project-card card${project.featured ? ' featured' : ''}`}
           data-category={project.category}
         >
-          {project.image ? (
-            <a href={`/projects/${project.slug}`} class="project-image">
-              <img src={project.image} alt="" loading="lazy" />
+          {project.images && project.images.length > 0 ? (
+            <a
+              href={`/projects/${project.slug}`}
+              class="project-image slideshow"
+              data-images={JSON.stringify(project.images.map(img => img.src))}
+            >
+              <img
+                src={project.images[0].src}
+                alt={project.title}
+                loading="lazy"
+              />
             </a>
           ) : (
             <a href={`/projects/${project.slug}`} class="project-image project-image--placeholder">
@@ -60,7 +68,7 @@ const filters: Array<{ id: 'all' | ProjectCategory; label: string }> = [
                 <li><span class="chip">{tag}</span></li>
               ))}
             </ul>
-            <a class="project-link" href={`/projects/${project.slug}`}>Read case study →</a>
+            <a class="project-link" href={`/projects/${project.slug}`}>Read more →</a>
           </div>
         </article>
       ))}
@@ -89,6 +97,35 @@ const filters: Array<{ id: 'all' | ProjectCategory; label: string }> = [
         card.classList.toggle('hidden', !show);
       });
     });
+  });
+
+  // -------------------------
+  // Slideshow
+  // -------------------------
+
+  const slideshows = document.querySelectorAll('.slideshow');
+
+  slideshows.forEach((slideshow) => {
+
+    const img = slideshow.querySelector('img');
+
+    const images = JSON.parse(slideshow.dataset.images);
+
+    let index = 0;
+
+    setInterval(() => {
+
+      index = (index + 1) % images.length;
+
+      img.style.opacity = 0;
+
+      setTimeout(() => {
+        img.src = images[index];
+        img.style.opacity = 1;
+      }, 250);
+
+    }, 2500);
+
   });
 </script>
 
@@ -146,13 +183,27 @@ const filters: Array<{ id: 'all' | ProjectCategory; label: string }> = [
     overflow: hidden;
     background: var(--bg-muted);
   }
+.project-image{
 
-  .project-image img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
+position:relative;
+overflow:hidden;
+aspect-ratio:16/10;
+background:var(--bg-muted);
 
+}
+
+.project-image img{
+
+width:100%;
+height:100%;
+
+object-fit:contain;
+
+transition:opacity .4s ease;
+
+display:block;
+
+}
   .project-image--placeholder {
     display: grid;
     place-items: center;

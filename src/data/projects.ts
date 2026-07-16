@@ -7,7 +7,11 @@ export interface Project {
   summary: string;
   category: ProjectCategory;
   featured?: boolean;
-  image?: string[];
+  // image?: string[];
+  images?: {
+  src: string;
+  caption?: string;
+  }[];
   organization?: string;
   year?: string;
   tags: string[];
@@ -39,6 +43,12 @@ export const projects: Project[] = [
     summary:
       'A multi-parameter patient monitoring system for continuous real-time monitoring of vital physiological parameters in critical and general care environments.',
     category: 'medical',
+    images: [
+      // {src: '/img/portfolio/NX5.jpeg'},
+      {src: '/img/portfolio/NX5_1.jpg'},
+      {src: '/img/portfolio/NX5_2.jpg'},
+      // {src: '/img/portfolio/swerve2020.png'},
+    ],
     featured: true,
     organization: 'Noccarc Robotics',
     year: '2024 – 2026',
@@ -46,27 +56,28 @@ export const projects: Project[] = [
     overview:
     'Patient Monitor NX5 is a next-generation multi-parameter patient monitoring system developed at Noccarc Robotics for continuous monitoring of vital physiological parameters in clinical environments. The system integrates multiple sensing modules—including ECG, Respiration, NIBP, SpO₂, Temperature, and Capnography—to provide accurate, real-time patient monitoring while meeting stringent medical device reliability and safety requirements.',
     role:[ 
-    'As an Embedded Systems Engineer, I contributed to the end-to-end firmware development of the Patient Monitor NX5. My responsibilities included developing firmware for physiological monitoring modules, implementing communication interfaces, integrating hardware with software, improving signal processing pipelines, supporting system validation, and collaborating closely with hardware engineers, production teams, and clinicians throughout the product development lifecycle.',
+    'I led the end-to-end firmware development of the Patient Monitor NX5 across multiple physiological monitoring modules. My work included firmware architecture, implementation of clinical algorithms, hardware-software integration, power management, validation, debugging, and system optimization. I collaborated closely with hardware engineers, production teams, and clinicians throughout the product development lifecycle.',
     ],
     engineeringHighlights:[
-      'Developed firmware for ECG, Respiration, Temperature, NIBP, and Capnography modules.',
-      'Implemented real-time data acquisition and embedded signal processing pipelines.',
-      'Integrated analog front-end hardware with STM32-based embedded firmware.',
-      'Designed modular firmware architecture for scalable feature integration.',
-      'Debugged hardware-software interactions using oscilloscopes, logic analyzers, and ST-Link.',
-      'Contributed to IEC-compliant firmware development and validation processes.',
-      'Participated in cross-functional debugging with hardware, production, and clinical teams.',
-      'Improved system reliability through firmware optimization and systematic testing.',
-      'Contributed to firmware development for Power Management Board, including Battery Management System (BMS) integration, charger IC configuration, and power subsystem validation to ensure reliable battery operation.',
+      'Owned the end-to-end firmware and clinical analysis development for the Patient Monitor NX5 across multiple physiological monitoring modules, excluding the ECG module.',
+      'Developed firmware and clinical algorithms for NIBP, Respiration, Temperature, and other physiological monitoring modules.',
+      'Designed and integrated communication interfaces between embedded modules and the main processing system.',
+      'Contributed to firmware development for the Power Management Board, including Battery Management System (BMS) integration and charger IC configuration.',
+      'Integrated embedded firmware with analog front-end hardware and sensing modules.',
+      'Performed board bring-up, debugging, validation, and system optimization using oscilloscopes, logic analyzers, and embedded debugging tools.',
+      'Collaborated with clinicians to refine and validate physiological measurement algorithms.',
     ],
     challenges:[
-      'Developing firmware for a medical device required balancing real-time performance, accuracy, reliability, and maintainability. One of the major challenges was integrating multiple sensing modules while ensuring stable communication, low processing latency, and robust hardware-software interaction. Debugging signal quality issues and validating firmware behavior across different hardware revisions required systematic testing and close collaboration with cross-functional teams.',
+      'Developing firmware for a multi-parameter patient monitor required coordinating multiple sensing modules, clinical algorithms, communication interfaces, and power management within a single real-time embedded platform. Ensuring reliable operation across evolving hardware revisions while maintaining measurement accuracy, low latency, and modular firmware architecture required extensive debugging, validation, and close collaboration across hardware, production, and clinical teams.',
     ],
     impact:[
-      'My contributions supported the development of a production-ready patient monitoring platform by improving firmware reliability, enabling modular feature development, strengthening hardware-software integration, and supporting accurate physiological signal acquisition. The project also provided extensive experience in developing embedded software for safety-critical medical systems where reliability and validation are fundamental design requirements.',
+      'Delivered production-ready firmware for the majority of the Patient Monitor NX5 subsystems.',
+      'Enabled reliable physiological monitoring through robust firmware architecture and clinical algorithm implementation.',
+      'Strengthened system reliability through hardware-software integration, validation, and systematic debugging.',
+      'Supported successful product development through close collaboration with hardware, manufacturing, and clinical teams.',
     ],
     learnings:[
-      'Working on Patient Monitor NX5 fundamentally changed how I think about embedded software. Beyond writing firmware, I learned the importance of designing reliable systems, validating software in safety-critical environments, collaborating across hardware and clinical teams, and appreciating that good engineering is measured not only by functionality but also by reliability, maintainability, and trust.',
+      'The Patient Monitor NX5 taught me how to engineer large embedded systems rather than individual firmware modules. Taking ownership of multiple subsystems required balancing architecture, real-time performance, hardware integration, clinical accuracy, and maintainability while collaborating across multidisciplinary teams. This experience fundamentally shaped how I approach embedded system design—from understanding individual components to thinking about the complete system.',
     ],
     technologies: {
       languages: ['C', 'C++', 'Python'],
@@ -90,6 +101,11 @@ export const projects: Project[] = [
     summary:
       'A critical-care mechanical ventilator designed to provide precise respiratory support and continuous monitoring for patients requiring assisted ventilation.',
     category: 'medical',
+    images: [
+      {src: '/img/portfolio/Noccarc-V730i-ICU-Ventilator.jpg'},
+      {src: '/img/portfolio/V730i.jpg'},
+      // {src: '/img/portfolio/swerve2020.png'},
+    ],
     featured: true,
     organization: 'Noccarc Robotics',
     year: '2024 – now',
@@ -140,26 +156,27 @@ export const projects: Project[] = [
     year: '2026',
     tags: ['IEC 60601', 'Embedded Firmware', 'Closed-Loop Temperature Control', 'Sensor Integration', 'Hardware-Software Integration', 'Embedded System Validation', 'Medical Device Development'],
     overview:
-    'Humidifier RH07 is a medical respiratory humidification system designed to deliver optimally heated and humidified air to patients undergoing respiratory therapy. The project involved developing embedded firmware for precise temperature regulation, sensor monitoring, user interaction, and reliable system operation while meeting the demands of a medical device development cycle.',
+    'Humidifier RH07 is a medical respiratory humidification system designed to deliver heated and humidified air during respiratory therapy. The device continuously monitors and regulates temperature to ensure safe and comfortable patient care while maintaining reliable operation in a clinical environment.',
     role:[ 
-    'As an Embedded Systems Engineer, I contributed to the firmware development of the Humidifier RH07 from early development through system validation. My work involved implementing embedded control logic, integrating sensors and peripherals, debugging hardware-software interactions, and supporting system testing to ensure reliable and safe device operation.',
+    'I independently developed the embedded firmware for the Humidifier RH07, taking ownership from firmware architecture and implementation through hardware integration, validation, debugging, and production readiness. I collaborated closely with hardware engineers throughout the development lifecycle to ensure reliable system performance and successful product integration.',
     ],
     engineeringHighlights:[
-      'Developed firmware for temperature sensing and closed-loop temperature control.',
-      'Integrated multiple hardware peripherals and sensors with the embedded firmware',
-      'Implemented safety checks and fault-handling mechanisms for reliable operation.',
-      'Performed hardware bring-up, debugging, and firmware validation during product development.',
-      'Collaborated with hardware and product teams to resolve integration issues and optimize system performance.',
-      'Contributed to the successful development of the product within an accelerated development timeline of approximately 75 days.',
+      'Designed and developed the complete embedded firmware for the Humidifier RH07.',
+      'Implemented temperature monitoring and closed-loop control algorithms for stable and accurate humidification.',
+      'Integrated sensors, peripherals, and hardware interfaces with the embedded firmware.',
+      'Developed firmware for user interaction, system monitoring, and fault handling.',
+      'Performed board bring-up, firmware debugging, and hardware-software integration.',
+      'Led firmware validation, functional testing, and issue resolution throughout the development cycle.',
+      'Successfully delivered a production-ready firmware solution within an accelerated development timeline of approximately 75 days.',   
     ],
     challenges:[
-      'Delivering a complete medical device within a compressed timeline required balancing rapid development with firmware reliability and system safety. Integrating hardware and firmware while validating sensor performance and maintaining stable temperature control demanded systematic debugging, close cross-functional collaboration, and careful testing throughout the development cycle.',
+      'Developing an entire embedded application within a compressed timeline required balancing rapid implementation with software quality and reliability. The project involved continuous hardware-software integration, debugging evolving hardware revisions, validating system behavior under different operating conditions, and ensuring stable temperature regulation while maintaining a clean and maintainable firmware architecture.',
     ],
     impact:[
-      'Contributed to the successful development and validation of a production-ready medical humidifier.',
-      'Supported reliable temperature regulation and overall system stability through robust firmware implementation.',
-      'Helped accelerate product development by resolving firmware and hardware integration issues efficiently.',
-      'Gained valuable experience working across the complete embedded product development lifecycle.',
+      'Delivered the complete firmware for a production-ready medical humidifier.',
+      'Enabled reliable temperature regulation and stable device operation through robust firmware implementation.',
+      'Accelerated product development by rapidly resolving firmware and hardware integration issues.',
+      'Contributed to successful product validation and readiness for manufacturing.',    
     ],
     learnings:[
       'The Humidifier RH07 project strengthened my ability to deliver reliable embedded software within aggressive development timelines. I learned how effective collaboration, systematic debugging, and iterative testing are essential when rapidly transforming hardware prototypes into production-ready medical devices. The experience also reinforced the importance of balancing development speed with reliability and maintainability in embedded system design.',
@@ -179,67 +196,45 @@ export const projects: Project[] = [
       ],
     },
   },
-  
-  // {
-  //   slug: 'robocon-2021',
-  //   title: 'Robocon 2021 Holonomic Robots',
-  //   summary:
-  //     'Holonomic robots with advanced locomotion and precise motor control for DD Robocon.',
-  //   category: 'robotics',
-  //   image: '/img/portfolio/swerve2020.png',
-  //   organization: 'Robotics Research Lab, GCOEARA',
-  //   year: '2021',
-  //   tags: ['Holonomic Drive', 'Motor Control', 'Competition'],
-  //   highlights: [
-  //     'Engineered holonomic robots with advanced locomotion and precise motor control.',
-  //     'Designed and integrated BLDC, DC, and stepper motor control systems for precise movement execution.',
-  //     'Developed and tested control logic for multi-actuator coordination, optimizing responsiveness for theme-specific challenges.',
-  //     'Achieved All India Rank 6 at DD Robocon 2021.',
-  //   ],
-  // },
   {
     slug: 'robocon',
     title: 'DD Robocon Competition Robots',
     summary:
-      'Holonomic robots with omni-wheel/mecanum drive for theme-specific competition tasks.',
+      'Holonomic drive robots with omni-wheel/mecanum drive for theme-specific competition tasks.',
     category: 'robotics',
-    image: [
-      '/img/portfolio/rrl2019a.jpg',
-      '/img/portfolio/swerve2020.png',
+    images: [
+      {src: '/img/portfolio/rrl2019a.jpg'},
+      {src: '/img/portfolio/rrl2019b.jpg'},
+      {src: '/img/portfolio/swerve2020.png'},
+      {src: '/img/portfolio/mecanum2020.png'},
     ],
     organization: 'Robotics Research Lab, GCOEARA',
-    year: '2020 - 2021',
-    tags: ['Embedded system', 'Robotics', 'Holonomic Drive', 'Swerve Drive', 'PID Control','Path Planning'],
-    // highlights: [
-    //   'Assisted in designing autonomous robots with omni-wheel/mecanum drive for theme-specific tasks.',
-    //   'Developed mechanism control systems for synchronized robotic movements, improving task execution accuracy.',
-    //   'Achieved All India Rank 14 at DD Robocon 2020.',
-    // ],
+    year: '2019 - 2021',
+    tags: ['Embedded system', 'Autonomous Robots', 'Holonomic Drive', 'Swerve Drive', 'PID Control', 'System Integration', 'Path Planning', 'Task Planning',],
     overview:
-    "DD Robocon is India's premier robotics competition, where multidisciplinary teams design and build robots to autonomously and manually complete complex theme-specific tasks under strict time and engineering constraints. Over two consecutive seasons, I contributed to the design, development, and integration of competition robots, working across embedded systems, control, electronics, PCB design, and system integration while helping the team achieve All India Rank 14 (2020) and All India Rank 6 (2021).",
-    role:[ 
-    'As a member of the Robotics Research Lab, I contributed to the embedded systems and electronics development of multiple competition robots across the 2020 and 2021 seasons. My work included embedded firmware development, motor control, custom PCB design, hardware integration, actuator control, and system testing. As my experience grew, I took on greater technical responsibility during the 2021 season, contributing to more complex system integration and robot development.',
+      'DD Robocon is India\'s premier robotics competition, where multidisciplinary teams design robots to complete complex autonomous and manual tasks under strict engineering constraints. Over two consecutive seasons, I progressed from contributing to robot development in 2020 to leading the embedded system development of the autonomous competition robot in 2021, helping the team improve from AIR 14 to AIR 6 nationally.',
+    role: [
+      'In 2020, I contributed to the development of a three-wheel omni-drive robot, focusing on embedded software and task execution planning. In 2021, I became the key developer for the autonomous swerve-drive robot, leading its embedded system development, task execution logic, system integration, and custom PCB design.',
     ],
-    engineeringHighlights:[
-      'Developed embedded firmware for autonomous and manually operated competition robots.',
-      'Designed and integrated custom PCBs for motor drivers, sensor interfaces, and embedded control.',
-      'Implemented precise control of DC motors, BLDC motors, and stepper motors.',
-      'Developed actuator control logic for synchronized robot mechanisms.',
-      'Integrated embedded hardware, sensors, and mechanical subsystems into complete robotic platforms.',
-      'Performed extensive debugging, field testing, and iterative improvements before competition.',
-      'Contributed to achieving AIR 14 in DD Robocon 2020 and AIR 6 in DD Robocon 2021.',
+    engineeringHighlights: [
+      'Developed the embedded software for the autonomous swerve-drive competition robot.',
+      'Designed task execution and autonomous control logic for theme-specific competition challenges.',
+      'Designed a custom PCB integrating the microcontroller, motor drivers, sensors, and supporting electronics.',
+      'Integrated hardware, embedded firmware, sensors, and mechanical subsystems into a complete robotic platform.',
+      'Contributed to the development and task execution planning of the three-wheel omni-drive robot during the 2020 season.',
+      'Performed extensive system testing, debugging, and competition validation.',
+      'Contributed to achieving AIR 14 (2020) and AIR 6 (2021) in DD Robocon.',
     ],
-    challenges:[
-      'Designing competition robots required balancing speed, precision, robustness, and rapid iteration within strict competition deadlines. Integrating embedded electronics with complex mechanical systems demanded continuous debugging, hardware modifications, and collaborative problem solving as designs evolved throughout the development cycle.',
+    challenges: [
+      'Building reliable competition robots within tight deadlines required rapid iteration across hardware, firmware, and mechanical design. Developing the autonomous swerve-drive robot involved coordinating multiple subsystems while ensuring accurate navigation, robust task execution, and reliable performance under competition conditions.',
     ],
-    impact:[
-      'Contributed to the successful development of multiple competition robots across two national Robocon seasons.',
-      'Helped the team improve its national ranking from AIR 14 to AIR 6.',
-      'Strengthened interdisciplinary collaboration between embedded, electronics, and mechanical engineering teams.',
-      'Built a strong foundation in embedded systems, robotics, and engineering under real-world time constraints.',
+    impact: [
+      'Led the embedded system development of the autonomous robot that contributed to the team securing AIR 6 in DD Robocon 2021.',
+      'Contributed to two consecutive nationally ranked DD Robocon robots.',
+      'Developed practical expertise in autonomous robotics, embedded system design, and multidisciplinary system integration.',
     ],
-    learnings:[
-      'DD Robocon taught me that building successful robotic systems requires far more than writing embedded software. I learned how firmware, electronics, mechanics, and control systems must work together as a single integrated system. Working under demanding competition deadlines strengthened my ability to iterate quickly, debug complex multidisciplinary problems, and collaborate effectively within a large engineering team',
+    learnings: [
+      'Working on DD Robocon transformed my understanding of robotics from individual components to complete autonomous systems. Leading the 2021 robot taught me how embedded software, electronics, control, and mechanical design must come together to build a reliable robot capable of performing under demanding real-world conditions.',
     ],
     technologies: {
       languages: ['C', 'Embedded C'],
@@ -256,62 +251,44 @@ export const projects: Project[] = [
       ],
     },
   },
-  // {
-  //   slug: 'customized-pcb',
-  //   title: 'Customized PCB for Robotics',
-  //   summary:
-  //     'PCB design for motor drivers and sensor integration with microcontrollers.',
-  //   category: 'robotics',
-  //   image: '/img/portfolio/pcb_top - Copy.png',
-  //   organization: 'Robotics Research Lab, GCOEARA',
-  //   year: '2020 – 2021',
-  //   tags: ['PCB Design', 'Motor Drivers', 'Altium'],
-  //   highlights: [
-  //     'Designed and fabricated a custom PCB for motor drivers and sensor integration in robotic applications.',
-  //     'Developed compact, high-speed circuit layouts ensuring minimal signal interference and power optimization.',
-  //   ],
-  // },
   {
     slug: 'robotic-hand-prosthesis',
     title: 'Robotic Hand Prosthesis',
     summary:
       'Muscle-controlled prosthetic hand using EMG signal processing for intuitive movement.',
     category: 'academic',
-    image: [
-      '/img/portfolio/Robotic_hand3.jpeg',
+    images: [
+      {src: '/img/portfolio/bionichand0.png'},
+      {src: '/img/portfolio/Robotic_hand3.jpeg'},
     ],
     organization: 'GCOEARA',
     year: '2022',
     tags: ['Embedded system', 'Biomedical signal processing', 'EMG signal Acquisition', 'Human - Machine Interaction', 'Motor Control'],
-    // highlights: [
-    //   'Developed a robotic prosthetic hand controlled by EMG signals, enabling intuitive muscle-based movement.',
-    //   'Implemented signal processing techniques to filter and interpret EMG signals for individual finger control.',
-    // ],
     overview:
-    "The Robotic Hand Prosthesis is an EMG-controlled prosthetic hand developed to demonstrate intuitive human-machine interaction through embedded systems and biomedical signal processing. The system captures electromyography (EMG) signals from forearm muscles, processes them in real time, and translates muscle activity into controlled finger movements, enabling natural and responsive prosthetic operation.",
+    "The Robotic Hand Prosthesis is a proof-of-concept assistive device that demonstrates how embedded systems can translate human muscle activity into physical movement. Using EMG (Electromyography) signals acquired from the forearm, the system controls a robotic hand in real time, showcasing the integration of biomedical sensing, embedded firmware, and electromechanical actuation.",
     role:[ 
-    'I developed the embedded firmware and signal processing pipeline for the prosthetic hand, focusing on EMG signal acquisition, filtering, feature extraction, and motor control. I also contributed to system integration, experimental validation, and iterative refinement of the control algorithms to improve responsiveness and movement accuracy.',
+    "I led the project from concept to prototype, coordinating system design while developing the embedded firmware, EMG signal acquisition pipeline, motor control logic, hardware integration, and system validation. I also guided the team's technical direction throughout development, from prototype design to competition demonstration.",
     ],
     engineeringHighlights:[
+      'Led the development of an EMG-controlled robotic prosthetic hand prototype',
       'Developed embedded firmware for real-time EMG signal acquisition and processing.',
-      'Implemented digital filtering techniques to reduce noise and improve signal quality.',
-      'Designed algorithms to interpret muscle activity and translate EMG signals into finger movements.',
-      'Integrated EMG sensing hardware with embedded motor control.',
-      'Optimized signal processing for reliable and responsive gesture recognition.',
-      'Performed experimental testing and iterative refinement of control algorithms.',
+      'Implemented digital filtering techniques to improve signal quality and reduce noise.',
+      'Designed motor control logic to translate muscle activity into prosthetic hand movement.',
+      'Integrated EMG sensors, embedded electronics, and actuators into a functional prototype.',
       'Validated system performance through repeated testing and functional evaluation.',
+      'Achieved 2nd Place at the COEP Tech I2I Competition.',
     ],
     challenges:[
-      'EMG signals are inherently low in amplitude, noisy, and vary significantly between users, making reliable interpretation challenging. Developing a responsive prosthetic control system required balancing signal filtering, processing latency, and gesture recognition accuracy while ensuring smooth and intuitive finger movement. Extensive experimentation was necessary to optimize signal processing and improve control reliability.',
+      'Designing a responsive prosthetic hand required integrating biomedical sensing, embedded software, and electromechanical hardware into a reliable prototype. Interpreting noisy EMG signals while maintaining responsive motor control demanded careful filtering, iterative testing, and continuous refinement of both hardware and firmware.',
     ],
     impact:[
-      'Demonstrated real-time control of a prosthetic hand using EMG-based muscle signals.',
-      'Successfully integrated biomedical signal processing with embedded motor control.',
-      'Strengthened understanding of human-machine interaction through embedded systems.',
-      'Gained practical experience in translating physiological signals into real-time embedded control.',
+      'Successfully demonstrated a working EMG-controlled prosthetic hand prototype.',
+      "Secured 2nd Place at the COEP Tech I2I Competition for the project's technical innovation.",
+      'Demonstrated the feasibility of combining biomedical signal acquisition with embedded control for assistive technology.',
+      'Strengthened interdisciplinary collaboration across embedded systems, electronics, and biomedical engineering.',
     ],
     learnings:[
-      'This project introduced me to the challenges of designing embedded systems that directly interact with the human body. I learned that reliable biomedical systems require more than accurate algorithms—they demand careful signal conditioning, robust embedded implementation, and thoughtful system design to transform noisy physiological signals into meaningful real-time actions. The experience strengthened my interest in embedded systems that create tangible human impact.',
+      "This project introduced me to biomedical engineering and showed how embedded systems can directly improve people's lives. Beyond firmware development, I learned how successful assistive technologies require close integration of sensing, electronics, mechanics, and software. Leading the project also strengthened my ability to coordinate technical decisions, iterate on prototypes, and translate theoretical concepts into a functional engineering solution.",
     ],
     technologies: {
       languages: ['C', 'Embedded C'],
@@ -333,47 +310,37 @@ export const projects: Project[] = [
     summary:
       'Self-balancing robot with PID control for real-time stability on a spherical wheel.',
     category: 'academic',
-    image: [
-      '/img/portfolio/ballbot2.jpeg',
+    images: [
+      {src: '/img/portfolio/ballbot2.jpeg'},
+      {src: '/img/portfolio/ballbot.jpeg'},
     ],
     organization: 'GCOEARA',
     year: '2022',
-    tags: [ 'Real-time control system', 'PID Control', 'Sensor Integration', 'Electromechanical Integration'],
+    // tags: [ 'Real-time control system', 'PID Control', 'Sensor Integration', 'Electromechanical Integration'],
+    tags: ['Control Systems', 'PID Control', 'IMU', 'Real-Time Systems', 'Motion Control'
+    ],
     overview:
-    "The Ball Balancing Robot is a dynamically stable mobile robot that balances on a single spherical wheel using closed-loop PID control. Developed as an interdisciplinary project between the Instrumentation & Control and Automobile Engineering departments, the robot continuously estimates its orientation using an IMU and applies real-time motor corrections to maintain stability under dynamic conditions.",
-    role:[ 
-    'I led an 8-member interdisciplinary team consisting of four Instrumentation & Control and four Automobile Engineering students throughout the project lifecycle. Alongside coordinating system development across both teams, I was responsible for embedded firmware development, PID controller implementation, IMU integration, controller tuning, system integration, and experimental validation.',
+      'The Ball Balancing Robot is a dynamically stable mobile robot that balances on a single spherical wheel using real-time feedback control. Developed as an interdisciplinary project between the Instrumentation & Control and Automobile Engineering departments, it demonstrated the practical implementation of embedded control systems for unstable dynamic platforms.',
+   role: [
+      'Led an interdisciplinary team of eight students and was responsible for the robot’s embedded software, control system implementation, IMU integration, controller tuning, system integration, and experimental validation.',
     ],
-    engineeringHighlights:[
-      // 'Developed embedded firmware for real-time balancing and motion control.',
-      // 'Implemented PID control algorithms for continuous stabilization of the robot.',
-      // 'Integrated inertial sensors for orientation estimation and feedback control.',
-      // 'Tuned control parameters through iterative experimentation to achieve stable balancing under dynamic disturbances.',
-      // 'Integrated motor drivers and actuators with the embedded control system.',
-      // 'Performed system testing, debugging, and controller optimization to improve stability and responsiveness.',
-      'Led an interdisciplinary team of 8 students across Instrumentation & Control and Automobile Engineering.',
-      'Developed embedded firmware for real-time balancing and motion control.',
-      'Implemented a PID-based feedback control system using IMU sensor data.',
-      'Integrated IMU sensors with the embedded controller for continuous orientation estimation.',
-      'Tuned PID parameters through iterative experimentation to achieve stable balancing under dynamic disturbances.',
-      'Integrated motor drivers and actuators with the embedded control system.',
-      'Coordinated mechanical and embedded system integration across multidisciplinary teams.',
-      'Performed system testing, debugging, and controller optimization to improve stability and responsiveness.',
+    engineeringHighlights: [
+      'Implemented a real-time PID feedback controller for dynamic balancing.',
+      'Integrated IMU sensing with embedded motion control.',
+      'Tuned controller parameters through iterative testing and experimental validation.',
+      'Developed firmware for sensor acquisition, actuator control, and system coordination.',
+      'Integrated mechanical, electronic, and embedded subsystems into a functional prototype.',
     ],
-    challenges:[
-      // 'Designing a dynamically stable system required balancing responsiveness with stability. Small changes in controller parameters could significantly affect system behavior, making controller tuning an iterative process. Sensor noise, actuator response, and real-time processing constraints also required careful consideration to achieve reliable balancing performance.',
-      'Developing a dynamically stable robot required balancing controller responsiveness with system stability while working under real-world hardware constraints. Achieving consistent balancing involved extensive PID tuning, repeated experimentation, and close coordination between the mechanical and embedded teams. Leading an interdisciplinary project also required effective communication and integration between hardware, mechanical, and control system development.',
+    challenges: [
+      'Achieving stable balancing required carefully tuning the controller while accounting for sensor noise, actuator response, and the nonlinear dynamics of an inherently unstable system. Coordinating software development with evolving mechanical design added further complexity throughout the project.',
     ],
-    impact:[
-      'Successfully demonstrated real-time balancing using embedded feedback control.',
-      'Delivered a fully integrated robotic system through effective collaboration between two engineering disciplines.',
-      'Validated the effectiveness of PID-based stabilization for dynamically unstable systems.',
-      'Strengthened practical understanding of embedded control systems, electromechanical integration, and team-based engineering.',
-      'Developed leadership and project coordination experience while managing an interdisciplinary engineering team.',
+    impact: [
+      'Successfully demonstrated stable real-time balancing on a single spherical wheel.',
+      'Delivered a complete interdisciplinary robotic system from concept to prototype.',
+      'Strengthened collaboration between Instrumentation & Control and Automobile Engineering teams.',
     ],
-    learnings:[
-      // 'This project transformed my understanding of control systems from theory into practice. I learned that achieving stable real-time behavior depends not only on selecting the right control algorithm but also on understanding sensor behavior, actuator limitations, system dynamics, and iterative tuning. It reinforced the importance of experimentation, observation, and continuous refinement in embedded system design.',
-      'Leading this project taught me that successful engineering extends beyond writing code or designing control algorithms. I learned how to coordinate multidisciplinary teams, communicate across different engineering domains, and integrate mechanical and embedded systems into a single working solution. Technically, the project transformed my understanding of feedback control by showing how controller tuning, system dynamics, and iterative experimentation together determine the performance of real-world embedded systems.',
+   learnings: [
+      'This project taught me how theoretical control concepts translate into real-world embedded systems. Leading an interdisciplinary team also strengthened my ability to coordinate technical work, make engineering decisions, and iterate rapidly through experimentation until the system achieved reliable performance.',
     ],
     technologies: {
       languages: ['C', 'Embedded C'],

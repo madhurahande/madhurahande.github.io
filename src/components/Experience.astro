@@ -8,7 +8,8 @@ import { experience, education } from '../data/experience';
       <p class="section-label">Engineering Journey</p>
       <h2 class="section-title">Industry experience and academic foundation</h2>
       <p class="section-subtitle">
-        My journey has taken me from robotics competitions and industrial automation to developing embedded software for safety-critical medical devices, with each experience strengthening my understanding of reliable embedded systems.
+        My journey from a curious engineering student to an embedded systems engineer has been shaped by robotics, industrial automation, and the development of safety-critical medical devices. Each experience strengthened my technical foundation while deepening my interest in designing reliable intelligent systems.
+        <!-- My journey has taken me from robotics competitions and industrial automation to developing embedded software for safety-critical medical devices, with each experience strengthening my understanding of reliable embedded systems. -->
         <!-- Over the past two years, I've contributed to the development of embedded systems across medical devices, robotics, and automation. My work has focused on building reliable firmware, integrating hardware and software, improving signal quality, and solving complex engineering challenges. -->
       </p>
     </div>
@@ -35,14 +36,14 @@ import { experience, education } from '../data/experience';
               </div>
               <ul>
                 {item.details.map((detail) => (
-                  <li>{detail}</li>
+                  <ul>{detail}</ul>
                 ))}
               </ul>
               {item.achievements && (
                 <div class="achievements">
                   {item.achievements.map((achievement) => (
                     <div class="achievement">
-                      <strong>{achievement.title}</strong>
+                      <li><strong>{achievement.title}</strong></li>
                       <span>{achievement.date}</span>
                       {achievement.certificateUrl && (
                         <a href={achievement.certificateUrl} target="_blank" rel="noreferrer">
@@ -53,9 +54,9 @@ import { experience, education } from '../data/experience';
                   ))}
                 </div>
               )}
-              <a class="cert-link" href="/img/certificates/degree.jpeg" target="_blank" rel="noreferrer">
+              <!-- <a class="cert-link" href="/img/certificates/degree.jpeg" target="_blank" rel="noreferrer">
                 View degree certificate
-              </a>
+              </a> -->
             </article>
           ))}
         </div>
@@ -78,14 +79,14 @@ import { experience, education } from '../data/experience';
               </div>
               <ul>
                 {item.highlights.map((point) => (
-                  <li>{point}</li>
+                  <ul>{point}</ul>
                 ))}
               </ul>
               {item.achievements && (
                 <div class="achievements">
                   {item.achievements.map((achievement) => (
                     <div class="achievement">
-                      <strong>{achievement.title}</strong>
+                      <li><strong>{achievement.title}</strong></li>
                       <span>{achievement.date}</span>
                       {achievement.certificateUrl && (
                         <a href={achievement.certificateUrl} target="_blank" rel="noreferrer">
@@ -164,6 +165,7 @@ import { experience, education } from '../data/experience';
     gap: 0.75rem;
     margin-top: 1rem;
     padding-top: 1rem;
+    padding-left: 3.5rem;
     border-top: 1px solid var(--border);
   }
 

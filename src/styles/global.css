@@ -98,7 +98,7 @@ a:hover {
 .section-subtitle {
   margin: 0;
   color: var(--text-muted);
-  max-width: 42rem;
+  max-width: 80rem;
 }
 
 .btn {
@@ -187,3 +187,113 @@ a:hover {
     padding: 3.5rem 0;
   }
 }
+.interest-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:1.5rem;
+
+margin-top:2rem;
+
+}
+
+.interest-card{
+
+padding:1.6rem;
+
+transition:.25s;
+
+}
+
+.interest-card:hover{
+
+transform:translateY(-5px);
+
+}
+
+.interest-icon{
+
+font-size:2rem;
+
+margin-bottom:.8rem;
+
+}
+
+.interest-card h3{
+
+margin-bottom:.6rem;
+
+}
+
+.interest-card p{
+
+color:var(--text-muted);
+
+line-height:1.7;
+
+}
+
+.rangoli{
+
+margin-bottom:2rem;
+
+padding:1.8rem;
+
+}
+
+.rangoli-content{
+
+display:grid;
+
+grid-template-columns:1fr; 
+
+gap:1rem;
+
+align-items:center;
+
+}
+
+.rangoli-gallery{
+
+display:grid;
+
+grid-template-columns:1fr 1fr 1fr;
+
+gap:.75rem;
+
+}
+
+.rangoli-gallery img{
+
+width:100%;
+
+aspect-ratio:1;
+
+object-fit:cover;
+
+border-radius:12px;
+
+transition:.3s;
+
+cursor:pointer;
+
+}
+
+.rangoli-gallery img:hover{
+
+transform:scale(1.04);
+
+}
+
+@media(max-width:900px){
+
+.rangoli-content{
+
+grid-template-columns:2fr;
+
+}
+
+}
+
