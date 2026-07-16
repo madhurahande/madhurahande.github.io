@@ -8,26 +8,15 @@ import { skillGroups, languages } from '../data/experience';
     <div class="section-header">
       <p class="section-label">About</p>
       <h2 class="section-title">Building systems with curiosity, reliability and purpose</h2>
-      <p class="section-subtitle">
-        My interest in embedded systems began with a simple question: how does software enable hardware to sense, decide, and interact with the physical world? That curiosity led me to Instrumentation and Control Engineering, where I discovered the fascinating intersection of electronics, software, and real-world systems.
-      </p>
+       <p class="section-subtitle">
+        I enjoy working at the intersection of hardware and software, where a few lines of firmware can directly influence how a physical system behaves. My work has exposed me to safety-critical medical devices, robotics, industrial automation, and embedded control systems, but what motivates me most is understanding complete systems rather than isolated components.
+        </p>
+        <p>
+          I am particularly interested in embedded architecture, real-time software, intelligent sensing, and designing reliable systems that solve meaningful real-world problems. As I continue to grow, I hope to contribute to technologies that are robust, human-centered, and built on strong engineering principles.
+        </p>
     </div>
 
     <div class="about-grid">
-      <div class="about-card card">
-        <h3>Engineering Journey</h3>
-        <p>
-          During university, robotics competitions taught me to solve engineering problems under real-world constraints while collaborating across mechanical, electrical, and software disciplines. Today, I develop firmware for safety-critical medical devices, where reliability, precision, and thoughtful system design are essential.        </p>
-        <p>
-          Although my professional experience is rooted in healthcare technology, my broader interests include embedded systems, real-time computing, embedded Linux, intelligent sensing, and system architecture. I'm continually learning, building, and exploring new ideas that help me become a better engineer.
-        </p>
-        <ul class="about-meta">
-          <li><span>Degree</span> BE Instrumentation & Control</li>
-          <li><span>Location</span> {site.location}</li>
-          <li><span>Email</span> <a href={`mailto:${site.email}`}>{site.email}</a></li>
-          <li><span>Phone</span> {site.phone}</li>
-        </ul>
-      </div>
 
       <div class="skills-panel">
         {skillGroups.map((group) => (
@@ -57,7 +46,7 @@ import { skillGroups, languages } from '../data/experience';
 <style>
   .about-grid {
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: 1fr;
     gap: 1.5rem;
     align-items: start;
   }
@@ -99,11 +88,13 @@ import { skillGroups, languages } from '../data/experience';
     text-transform: uppercase;
     letter-spacing: 0.06em;
   }
-
-  .skills-panel {
-    display: grid;
-    gap: 1rem;
-  }
+  
+.skills-panel {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
 
   @media (max-width: 900px) {
     .about-grid {

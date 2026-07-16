@@ -1,6 +1,6 @@
 export const site = {
   name: 'Madhura Hande Deshmukh',
-  title: 'Madhura Hande Deshmukh | Embedded Systems Engineer',
+  title: 'Madhura Hande Deshmukh | Embedded Systems Engineer | Critical Care Devices',
   description:
               'Embedded Systems Engineer building reliable real-time software for intelligent hardware. Interested in embedded systems, firmware architecture, signal processing and reliable software for safety-critical systems.',
   url: 'https://madhurahande.github.io',
@@ -12,7 +12,7 @@ export const site = {
   resumePath: '/resume.pdf',
   formspreeEndpoint: 'https://formspree.io/f/xknajvjn',
   profileImage: '/img/Profile.jpg',
-  heroTagline: 'Embedded Systems Engineer',
+  heroTagline: 'Embedded Systems Engineer  |   Critical Care Devices',
   heroPitch: [
     // "I'm fascinated by how software transforms hardware into intelligent systems—from tiny microcontrollers to complex real-world devices.",
 
@@ -22,7 +22,10 @@ export const site = {
     
     // "I'm driven by a desire to deepen my understanding of embedded systems and contribute to technologies that create meaningful real-world impact through research and engineering."
   
-    "I design reliable embedded software for real-world systems, combining firmware, hardware, and system-level thinking to solve complex engineering problems. My experience spans medical devices, robotics, and intelligent sensing, while my interests continue to evolve through research, continuous learning, and exploration."
+    // "I design reliable embedded software for real-world systems, combining firmware, hardware, and system-level thinking to solve complex engineering problems. My experience spans medical devices, robotics, and intelligent sensing, while my interests continue to evolve through research, continuous learning, and exploration."
+  
+    "I enjoy understanding how software interacts with the physical world through intelligent embedded systems. My interests span embedded firmware, real-time systems, signal processing, and hardware-software co-design, with experience across medical devices, robotics, and automation.",
+
   ],
   gradSchoolNote:
     'Engineering embedded systems where hardware, software and curiosity come together.',
