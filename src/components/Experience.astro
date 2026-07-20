@@ -18,6 +18,47 @@ import { experience, education } from '../data/experience';
     
       <div>
         <div class="timeline">
+          {experience.map((item) => (
+            <article class="timeline-item card">
+              <div class="timeline-head">
+                {item.logo && <img src={item.logo} alt="" width="48" height="48" class="logo" />}
+                <div>
+                  <h4>{item.role}</h4>
+                  <p class="org">
+                    {item.companyUrl ? (
+                      <a href={item.companyUrl} target="_blank" rel="noreferrer">{item.company}</a>
+                    ) : (
+                      item.company
+                    )}
+                  </p>
+                  <p class="dates">{item.start} — {item.end}</p>
+                </div>
+              </div>
+              <ul>
+                {item.highlights.map((point) => (
+                  <ul>{point}</ul>
+                ))}
+              </ul>
+              {item.achievements && (
+                <div class="achievements">
+                  {item.achievements.map((achievement) => (
+                    <div class="achievement">
+                      <li><strong>{achievement.title}</strong></li>
+                      <span>{achievement.date}</span>
+                      {achievement.certificateUrl && (
+                        <a href={achievement.certificateUrl} target="_blank" rel="noreferrer">
+                          View certificate
+                        </a>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </article>
+          ))}
+        </div>
+        
+        <div class="timeline">
           {education.map((item) => (
             <article class="timeline-item card">
               <div class="timeline-head">
@@ -57,46 +98,6 @@ import { experience, education } from '../data/experience';
               <!-- <a class="cert-link" href="/img/certificates/degree.jpeg" target="_blank" rel="noreferrer">
                 View degree certificate
               </a> -->
-            </article>
-          ))}
-        </div>
-        <div class="timeline">
-          {experience.map((item) => (
-            <article class="timeline-item card">
-              <div class="timeline-head">
-                {item.logo && <img src={item.logo} alt="" width="48" height="48" class="logo" />}
-                <div>
-                  <h4>{item.role}</h4>
-                  <p class="org">
-                    {item.companyUrl ? (
-                      <a href={item.companyUrl} target="_blank" rel="noreferrer">{item.company}</a>
-                    ) : (
-                      item.company
-                    )}
-                  </p>
-                  <p class="dates">{item.start} — {item.end}</p>
-                </div>
-              </div>
-              <ul>
-                {item.highlights.map((point) => (
-                  <ul>{point}</ul>
-                ))}
-              </ul>
-              {item.achievements && (
-                <div class="achievements">
-                  {item.achievements.map((achievement) => (
-                    <div class="achievement">
-                      <li><strong>{achievement.title}</strong></li>
-                      <span>{achievement.date}</span>
-                      {achievement.certificateUrl && (
-                        <a href={achievement.certificateUrl} target="_blank" rel="noreferrer">
-                          View certificate
-                        </a>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              )}
             </article>
           ))}
         </div>

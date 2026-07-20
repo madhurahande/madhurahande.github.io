@@ -56,6 +56,13 @@ import { skillGroups, languages } from '../data/experience';
     padding: 1.5rem;
   }
 
+@media (max-width:768px){
+.skill-group{
+    padding:1rem;
+}
+
+}
+
   .about-card h3,
   .skill-group h3 {
     margin-top: 0;
@@ -88,13 +95,25 @@ import { skillGroups, languages } from '../data/experience';
     text-transform: uppercase;
     letter-spacing: 0.06em;
   }
-  
-.skills-panel {
+
+  .skills-panel {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
-  align-items: start;
 }
+
+@media (max-width: 900px) {
+  .skills-panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
 
   @media (max-width: 900px) {
     .about-grid {
