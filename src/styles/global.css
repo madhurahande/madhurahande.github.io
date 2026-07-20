@@ -259,31 +259,23 @@ align-items:center;
 
 display:grid;
 
-grid-template-columns:1fr 1fr 1fr;
+grid-template-columns:1fr 1fr 1fr 1fr;
 
 gap:.75rem;
 
 }
 
-.rangoli-gallery img{
-
-width:100%;
-
-aspect-ratio:1;
-
-object-fit:cover;
-
-border-radius:12px;
-
-transition:.3s;
-
-cursor:pointer;
-
+.rangoli-gallery img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 0 auto;
 }
 
 .rangoli-gallery img:hover{
 
-transform:scale(1.04);
+transform:scale(1.10);
 
 }
 
@@ -292,13 +284,22 @@ transform:scale(1.04);
 .rangoli-content{
 
 grid-template-columns:1fr;
-
+grid-template-rows:1fr;
 }
 
+.rangoli-gallery{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+/* gap:.75rem; */
+
+}
 }
 
 .hero-stats span a {
-  color: accent;
+  color: var(--accent);
   text-decoration: none;
   transition: color 0.2s ease;
 }
