@@ -21,15 +21,23 @@ import { site } from '../data/site';
       <div class="hero-stats">
         <div>
           <strong>{site.stats.IndustryExperienceYears}+</strong>
-          <span>Industry Experience </span>
+          <span>years of Industry Experience </span>
         </div>
         <div>
           <strong>{site.stats.UniversityRank}</strong>
-          <span>University Rank</span>
+          <span>Pune University Rank</span>
         </div>
-        <div>
+       <div>
           <strong>{site.stats.ABURoboconRank}</strong>
-          <span>ABU Robocon AIR</span>
+          <span>
+            <a
+              href="https://en.wikipedia.org/wiki/ABU_Robocon"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ABU Robocon All India Rank ↗
+            </a>
+          </span>
         </div>
       </div>
     </div>
@@ -145,16 +153,30 @@ import { site } from '../data/site';
     flex-direction: column;
     gap: .4rem;
 }
+@media (max-width:900px){
 
-  @media (max-width: 900px) {
-    .hero-grid {
-      grid-template-columns: 1fr;
-    }
+.hero-copy{
+    display:flex;
+    flex-direction:column;
+}
+ .hero-grid {
+    grid-template-columns: 1fr;
+  }
 
     .hero-visual {
-      max-width: 420px;
+      margin-left: 0;
+      margin-right: 0;
+      justify-self: center;   /* Mobile: center */
     }
-  }
+
+.hero-eyebrow,
+.hero-pitch,
+.hero-actions,
+.hero-stats{
+    order:3;
+}
+
+}
 
   @media (max-width: 560px) {
     .hero-stats {

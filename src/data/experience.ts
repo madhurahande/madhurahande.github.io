@@ -10,88 +10,7 @@ export interface ExperienceItem {
 }
 
 export const experience: ExperienceItem[] = [
-  {
-    role: 'Team Member',
-    company: 'Robotics Research Lab, GCOEARA',
-    companyUrl: 'https://rrlgcoeara.in/',
-    logo: '/img/robotics_research_lab_logo.jpeg',
-    start: 'August 2019',
-    end: 'August 2021',
-    highlights: [
-      // 'Collaborated with 25+ students on ABU Asia-Pacific Robot Contests, improving team productivity by 25%.',
-      // 'Mentored juniors on competition projects and academic applications.',
-      'Outside the classroom, I joined the Robotics Research Lab, where I gained hands-on experience building real robotic systems under demanding competition timelines. Over two DD Robocon seasons, I progressed from contributing to robot development to leading the embedded system development of the autonomous competition robot.',
-    ],
-    achievements: [
-      {
-        title: 'Contributed to the three-wheel omni-drive robot',
-        date: '2019 - 2020',
-      },
-      {
-        title: 'All India Rank 14 — DD Robocon',
-        date: 'October 2020',
-        certificateUrl: '/img/certificates/Robocon2020.jpeg',
-      },
-      {
-        title: 'Key developer for the autonomous swerve-drive robot',
-        date: '2020 - 2021',
-      },
-      {
-        title: 'Designed a custom PCB integrating the controller, motor drivers, sensors, and supporting electronics',
-        date: '2020 - 2021',
-      },
-      {
-        title: 'All India Rank 6 — DD Robocon',
-        date: 'August 2021',
-        certificateUrl: '/img/certificates/Robocon2021.jpeg',
-      },
-    ],
-  },
-  {
-    role: 'Engineering Intern',
-    company: 'MNC Automation and Services India Pvt Ltd',
-    companyUrl: 'https://www.linkedin.com/company/mncas/',
-    logo: '/img/mncas_logo.jpeg',
-    start: 'January 2022',
-    end: 'March 2022',
-    highlights: [
-      // 'Designed and tested industrial control panels and PLC-based automation systems.',
-      // 'Developed ladder logic for automated manufacturing systems.',
-      'My first industry experience introduced me to industrial automation, PLC programming, and control panel design. It gave me practical exposure to engineering workflows and demonstrated how embedded and control systems are applied in manufacturing environments.',
-    ],
-  },
-  {
-    role: 'Embedded Systems Intern',
-    company: 'Noccarc Robotics',
-    companyUrl: 'https://www.noccarc.com/',
-    logo: '/img/noccarc_logo.jpeg',
-    start: 'October 2023',
-    end: 'July 2024',
-    highlights: [
-      // 'Developed physiological monitoring algorithms achieving 98% accuracy with 2% deviation.',
-      // 'Designed automated PCB test fixtures, improving test coverage and reducing manual effort by 70%.',
-      // 'Contributed to prototype firmware with medical-grade sensor calibration and data processing.',
-      // 'Validated hardware using oscilloscopes, logic analyzers, and JTAG tools.',
-      'I transitioned into the medical device industry, working on firmware for patient monitoring systems. This role introduced me to safety-critical embedded development, hardware validation, physiological signal processing, and regulatory engineering practices.',
-    ],
-    achievements: [
-      {
-        title: 'Developed firmware and physiological algorithms',
-        date: '',
-        certificateUrl: '',
-      },
-      {
-        title: 'Built automated PCB testing solutions',
-        date: '',
-        certificateUrl: '',
-      },
-      {
-        title: 'Validated embedded hardware and prototypes',
-        date: '',
-        certificateUrl: '',
-      },
-    ],
-  },
+  
   {
     
     role: 'Embedded Software Engineer',
@@ -141,6 +60,88 @@ export const experience: ExperienceItem[] = [
       },
     ],
   },
+  {
+    role: 'Embedded Systems Intern',
+    company: 'Noccarc Robotics',
+    companyUrl: 'https://www.noccarc.com/',
+    logo: '/img/noccarc_logo.jpeg',
+    start: 'October 2023',
+    end: 'July 2024',
+    highlights: [
+      // 'Developed physiological monitoring algorithms achieving 98% accuracy with 2% deviation.',
+      // 'Designed automated PCB test fixtures, improving test coverage and reducing manual effort by 70%.',
+      // 'Contributed to prototype firmware with medical-grade sensor calibration and data processing.',
+      // 'Validated hardware using oscilloscopes, logic analyzers, and JTAG tools.',
+      'I transitioned into the medical device industry, working on firmware for patient monitoring systems. This role introduced me to safety-critical embedded development, hardware validation, physiological signal processing, and regulatory engineering practices.',
+    ],
+    achievements: [
+      {
+        title: 'Developed firmware and physiological algorithms',
+        date: '',
+        certificateUrl: '',
+      },
+      {
+        title: 'Built automated PCB testing solutions',
+        date: '',
+        certificateUrl: '',
+      },
+      {
+        title: 'Validated embedded hardware and prototypes',
+        date: '',
+        certificateUrl: '',
+      },
+    ],
+  },
+{
+    role: 'Engineering Intern',
+    company: 'MNC Automation and Services India Pvt Ltd',
+    companyUrl: 'https://www.linkedin.com/company/mncas/',
+    logo: '/img/mncas_logo.jpeg',
+    start: 'January 2022',
+    end: 'March 2022',
+    highlights: [
+      // 'Designed and tested industrial control panels and PLC-based automation systems.',
+      // 'Developed ladder logic for automated manufacturing systems.',
+      'My first industry experience introduced me to industrial automation, PLC programming, and control panel design. It gave me practical exposure to engineering workflows and demonstrated how embedded and control systems are applied in manufacturing environments.',
+    ],
+  },
+  {
+    role: 'Team Member',
+    company: 'Robotics Research Lab, GCOEARA',
+    companyUrl: 'https://rrlgcoeara.in/',
+    logo: '/img/robotics_research_lab_logo.jpeg',
+    start: 'August 2019',
+    end: 'August 2021',
+    highlights: [
+      // 'Collaborated with 25+ students on ABU Asia-Pacific Robot Contests, improving team productivity by 25%.',
+      // 'Mentored juniors on competition projects and academic applications.',
+      'Outside the classroom, I joined the Robotics Research Lab, where I gained hands-on experience building real robotic systems under demanding competition timelines. Over two DD Robocon seasons, I progressed from contributing to robot development to leading the embedded system development of the autonomous competition robot.',
+    ],
+    achievements: [
+      {
+        title: 'Contributed to the three-wheel omni-drive robot',
+        date: '2019 - 2020',
+      },
+      {
+        title: 'All India Rank 14 — DD Robocon',
+        date: 'October 2020',
+        certificateUrl: '/img/certificates/Robocon2020.jpeg',
+      },
+      {
+        title: 'Key developer for the autonomous swerve-drive robot',
+        date: '2020 - 2021',
+      },
+      {
+        title: 'Designed a custom PCB integrating the controller, motor drivers, sensors, and supporting electronics',
+        date: '2020 - 2021',
+      },
+      {
+        title: 'All India Rank 6 — DD Robocon',
+        date: 'August 2021',
+        certificateUrl: '/img/certificates/Robocon2021.jpeg',
+      },
+    ],
+  },  
 ];
 
 export interface EducationItem {
@@ -184,6 +185,7 @@ export const education: EducationItem[] = [
       },
     ],
   },
+  
 ];
 
 export interface JourneyItem {
@@ -201,25 +203,62 @@ export interface JourneyItem {
 
 export const journey: JourneyItem[] = [
   {
-    year: "2019",
+    year:
+      "2024–Present",
 
-    title: "Bachelor of Engineering",
+    title:
+      "Embedded Systems Engineer",
+
     subtitle:
-      "Government College of Engineering & Research, Pune",
+      "Noccarc Robotics",
 
-    logo: "/img/govt-college-logo.png",
+    logo:
+      "/img/noccarc_logo.jpeg",
 
     description:
-      "Started my journey in Instrumentation & Control Engineering, building a strong foundation in electronics, control systems, embedded programming, sensors, and instrumentation.",
+      "Leading firmware development across multiple medical device platforms including Patient Monitor NX5, Ventilator V730i, and Humidifier RH07, with responsibilities spanning firmware architecture, clinical algorithms, hardware integration, debugging, and validation.",
 
     lessons:
-      "Discovered my interest in embedded systems by understanding how software interacts with physical hardware.",
+      "Gained confidence in owning complete embedded systems while balancing reliability, maintainability, and product delivery."
+  },
 
-    achievements: [
-      {
-        title: "SPPU Rank 10"
-      }
-    ]
+  {
+    year:
+      "2023",
+
+    title:
+      "Embedded Software Intern",
+
+    subtitle:
+      "Noccarc Robotics",
+
+    logo:
+      "/img/noccarc_logo.jpeg",
+
+    description:
+      "Transitioned into medical device firmware development, contributing to patient monitors, ventilators, and manufacturing validation.",
+
+    lessons:
+      "Learned the discipline required to develop reliable software for safety-critical embedded systems."
+  },
+  
+  {
+    year: "2022",
+
+    title:
+      "Engineering Intern",
+
+    subtitle:
+      "MNC Automation",
+
+    logo:
+      "/img/mncas_logo.jpeg",
+
+    description:
+      "Designed industrial control panels, PLC-based automation systems, and ladder logic for manufacturing applications.",
+
+    lessons:
+      "Developed an appreciation for industrial automation and practical control systems."
   },
 
   {
@@ -248,65 +287,28 @@ export const journey: JourneyItem[] = [
       }
     ]
   },
-
   {
-    year: "2022",
+    year: "2019",
 
-    title:
-      "Engineering Intern",
-
+    title: "Bachelor of Engineering",
     subtitle:
-      "MNC Automation",
+      "Government College of Engineering & Research, Pune",
 
-    logo:
-      "/img/mncas_logo.jpeg",
+    logo: "/img/govt-college-logo.png",
 
     description:
-      "Designed industrial control panels, PLC-based automation systems, and ladder logic for manufacturing applications.",
+      "Started my journey in Instrumentation & Control Engineering, building a strong foundation in electronics, control systems, embedded programming, sensors, and instrumentation.",
 
     lessons:
-      "Developed an appreciation for industrial automation and practical control systems."
-  },
+      "Discovered my interest in embedded systems by understanding how software interacts with physical hardware.",
 
-  {
-    year:
-      "2023",
-
-    title:
-      "Embedded Software Intern",
-
-    subtitle:
-      "Noccarc Robotics",
-
-    logo:
-      "/img/noccarc_logo.jpeg",
-
-    description:
-      "Transitioned into medical device firmware development, contributing to patient monitors, ventilators, and manufacturing validation.",
-
-    lessons:
-      "Learned the discipline required to develop reliable software for safety-critical embedded systems."
-  },
-
-  {
-    year:
-      "2024–Present",
-
-    title:
-      "Embedded Systems Engineer",
-
-    subtitle:
-      "Noccarc Robotics",
-
-    logo:
-      "/img/noccarc_logo.jpeg",
-
-    description:
-      "Leading firmware development across multiple medical device platforms including Patient Monitor NX5, Ventilator V730i, and Humidifier RH07, with responsibilities spanning firmware architecture, clinical algorithms, hardware integration, debugging, and validation.",
-
-    lessons:
-      "Gained confidence in owning complete embedded systems while balancing reliability, maintainability, and product delivery."
+    achievements: [
+      {
+        title: "SPPU Rank 10"
+      }
+    ]
   }
+
 ];
 
 export const skillGroups = [
