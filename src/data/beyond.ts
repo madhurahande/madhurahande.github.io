@@ -14,7 +14,7 @@ export const books = [
     link: "https://en.wikipedia.org/wiki/Gopal_Nilkanth_Dandekar",
   },
   {
-    title: "रारंगढांग",
+    title: "रारंग ढांग",
     author: "Prabhakar Pendharkar",
     reflection:
       "A compelling story about resilience, courage, and human relationships.",
