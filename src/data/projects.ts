@@ -196,6 +196,111 @@ export const projects: Project[] = [
       ],
     },
   },
+  
+  {
+    slug: 'ball-balancing-robot',
+    title: 'Ball Balancing Robot',
+    summary:
+      'Self-balancing robot with PID control for real-time stability on a spherical wheel.',
+    category: 'academic',
+    images: [
+      {src: '/img/portfolio/ballbot2.jpeg'},
+      {src: '/img/portfolio/ballbot.jpeg'},
+    ],
+    organization: 'GCOEARA',
+    year: '2022',
+    // tags: [ 'Real-time control system', 'PID Control', 'Sensor Integration', 'Electromechanical Integration'],
+    tags: ['Control Systems', 'PID Control', 'IMU', 'Real-Time Systems', 'Motion Control'
+    ],
+    overview:
+      'The Ball Balancing Robot is a dynamically stable mobile robot that balances on a single spherical wheel using real-time feedback control. Developed as an interdisciplinary project between the Instrumentation & Control and Automobile Engineering departments, it demonstrated the practical implementation of embedded control systems for unstable dynamic platforms.',
+   role: [
+      'Led an interdisciplinary team of eight students and was responsible for the robot’s embedded software, control system implementation, IMU integration, controller tuning, system integration, and experimental validation.',
+    ],
+    engineeringHighlights: [
+      'Implemented a real-time PID feedback controller for dynamic balancing.',
+      'Integrated IMU sensing with embedded motion control.',
+      'Tuned controller parameters through iterative testing and experimental validation.',
+      'Developed firmware for sensor acquisition, actuator control, and system coordination.',
+      'Integrated mechanical, electronic, and embedded subsystems into a functional prototype.',
+    ],
+    challenges: [
+      'Achieving stable balancing required carefully tuning the controller while accounting for sensor noise, actuator response, and the nonlinear dynamics of an inherently unstable system. Coordinating software development with evolving mechanical design added further complexity throughout the project.',
+    ],
+    impact: [
+      'Successfully demonstrated stable real-time balancing on a single spherical wheel.',
+      'Delivered a complete interdisciplinary robotic system from concept to prototype.',
+      'Strengthened collaboration between Instrumentation & Control and Automobile Engineering teams.',
+    ],
+   learnings: [
+      'This project taught me how theoretical control concepts translate into real-world embedded systems. Leading an interdisciplinary team also strengthened my ability to coordinate technical work, make engineering decisions, and iterate rapidly through experimentation until the system achieved reliable performance.',
+    ],
+    technologies: {
+      languages: ['C', 'Embedded C'],
+      microcontrollers: ['STM32 ARM Cortex-M'],
+      protocols: ['ADC', 'DMA', 'GPIO', 'Timers', 'PWM'],
+      tools: ['HAL', 'CMSIS', 'Git', 'Oscilloscope', 'Logic Analyzer', 'ST Link'],
+      concepts: [
+        'Real-time control system',
+        'PID Control',
+        'Sensor Integration',
+        'Electromechanical Integration',
+      ],
+    },
+  },
+  {
+    slug: 'robotic-hand-prosthesis',
+    title: 'Robotic Hand Prosthesis',
+    summary:
+      'Muscle-controlled prosthetic hand using EMG signal processing for intuitive movement.',
+    category: 'academic',
+    images: [
+      {src: '/img/portfolio/bionichand0.png'},
+      // {src: '/img/portfolio/Robotic_hand3.jpeg'},
+    ],
+    organization: 'GCOEARA',
+    year: '2022',
+    tags: ['Embedded system', 'Biomedical signal processing', 'Human - Machine Interaction'],
+    overview:
+    "The Robotic Hand Prosthesis is a proof-of-concept assistive device that demonstrates how embedded systems can translate human muscle activity into physical movement. Using EMG (Electromyography) signals acquired from the forearm, the system controls a robotic hand in real time, showcasing the integration of biomedical sensing, embedded firmware, and electromechanical actuation.",
+    role:[ 
+    "I led the project from concept to prototype, coordinating system design while developing the embedded firmware, EMG signal acquisition pipeline, motor control logic, hardware integration, and system validation. I also guided the team's technical direction throughout development, from prototype design to competition demonstration.",
+    ],
+    engineeringHighlights:[
+      'Led the development of an EMG-controlled robotic prosthetic hand prototype',
+      'Developed embedded firmware for real-time EMG signal acquisition and processing.',
+      'Implemented digital filtering techniques to improve signal quality and reduce noise.',
+      'Designed motor control logic to translate muscle activity into prosthetic hand movement.',
+      'Integrated EMG sensors, embedded electronics, and actuators into a functional prototype.',
+      'Validated system performance through repeated testing and functional evaluation.',
+      'Achieved 2nd Place at the COEP Tech I2I Competition.',
+    ],
+    challenges:[
+      'Designing a responsive prosthetic hand required integrating biomedical sensing, embedded software, and electromechanical hardware into a reliable prototype. Interpreting noisy EMG signals while maintaining responsive motor control demanded careful filtering, iterative testing, and continuous refinement of both hardware and firmware.',
+    ],
+    impact:[
+      'Successfully demonstrated a working EMG-controlled prosthetic hand prototype.',
+      "Secured 2nd Place at the COEP Tech I2I Competition for the project's technical innovation.",
+      'Demonstrated the feasibility of combining biomedical signal acquisition with embedded control for assistive technology.',
+      'Strengthened interdisciplinary collaboration across embedded systems, electronics, and biomedical engineering.',
+    ],
+    learnings:[
+      "This project introduced me to biomedical engineering and showed how embedded systems can directly improve people's lives. Beyond firmware development, I learned how successful assistive technologies require close integration of sensing, electronics, mechanics, and software. Leading the project also strengthened my ability to coordinate technical decisions, iterate on prototypes, and translate theoretical concepts into a functional engineering solution.",
+    ],
+    technologies: {
+      languages: ['C', 'Embedded C'],
+      microcontrollers: ['STM32 ARM Cortex-M'],
+      protocols: ['ADC', 'DMA', 'GPIO', 'Timers', 'PWM'],
+      tools: ['HAL', 'CMSIS', 'Git', 'Oscilloscope', 'Logic Analyzer', 'ST Link'],
+      concepts: [
+        'Embedded system',
+        'Biomedical signal processing',
+        'EMG signal Acquisition',
+        'Human - Machine Interaction',
+        'Motor Control',
+      ],
+    },
+  },
   {
     slug: 'robocon',
     title: 'DD Robocon Competition Robots',
@@ -248,110 +353,6 @@ export const projects: Project[] = [
         'Swerve Drive',
         'PID Control',
         'Path Planning',
-      ],
-    },
-  },
-  {
-    slug: 'robotic-hand-prosthesis',
-    title: 'Robotic Hand Prosthesis',
-    summary:
-      'Muscle-controlled prosthetic hand using EMG signal processing for intuitive movement.',
-    category: 'academic',
-    images: [
-      {src: '/img/portfolio/bionichand0.png'},
-      {src: '/img/portfolio/Robotic_hand3.jpeg'},
-    ],
-    organization: 'GCOEARA',
-    year: '2022',
-    tags: ['Embedded system', 'Biomedical signal processing', 'EMG signal Acquisition', 'Human - Machine Interaction', 'Motor Control'],
-    overview:
-    "The Robotic Hand Prosthesis is a proof-of-concept assistive device that demonstrates how embedded systems can translate human muscle activity into physical movement. Using EMG (Electromyography) signals acquired from the forearm, the system controls a robotic hand in real time, showcasing the integration of biomedical sensing, embedded firmware, and electromechanical actuation.",
-    role:[ 
-    "I led the project from concept to prototype, coordinating system design while developing the embedded firmware, EMG signal acquisition pipeline, motor control logic, hardware integration, and system validation. I also guided the team's technical direction throughout development, from prototype design to competition demonstration.",
-    ],
-    engineeringHighlights:[
-      'Led the development of an EMG-controlled robotic prosthetic hand prototype',
-      'Developed embedded firmware for real-time EMG signal acquisition and processing.',
-      'Implemented digital filtering techniques to improve signal quality and reduce noise.',
-      'Designed motor control logic to translate muscle activity into prosthetic hand movement.',
-      'Integrated EMG sensors, embedded electronics, and actuators into a functional prototype.',
-      'Validated system performance through repeated testing and functional evaluation.',
-      'Achieved 2nd Place at the COEP Tech I2I Competition.',
-    ],
-    challenges:[
-      'Designing a responsive prosthetic hand required integrating biomedical sensing, embedded software, and electromechanical hardware into a reliable prototype. Interpreting noisy EMG signals while maintaining responsive motor control demanded careful filtering, iterative testing, and continuous refinement of both hardware and firmware.',
-    ],
-    impact:[
-      'Successfully demonstrated a working EMG-controlled prosthetic hand prototype.',
-      "Secured 2nd Place at the COEP Tech I2I Competition for the project's technical innovation.",
-      'Demonstrated the feasibility of combining biomedical signal acquisition with embedded control for assistive technology.',
-      'Strengthened interdisciplinary collaboration across embedded systems, electronics, and biomedical engineering.',
-    ],
-    learnings:[
-      "This project introduced me to biomedical engineering and showed how embedded systems can directly improve people's lives. Beyond firmware development, I learned how successful assistive technologies require close integration of sensing, electronics, mechanics, and software. Leading the project also strengthened my ability to coordinate technical decisions, iterate on prototypes, and translate theoretical concepts into a functional engineering solution.",
-    ],
-    technologies: {
-      languages: ['C', 'Embedded C'],
-      microcontrollers: ['STM32 ARM Cortex-M'],
-      protocols: ['ADC', 'DMA', 'GPIO', 'Timers', 'PWM'],
-      tools: ['HAL', 'CMSIS', 'Git', 'Oscilloscope', 'Logic Analyzer', 'ST Link'],
-      concepts: [
-        'Embedded system',
-        'Biomedical signal processing',
-        'EMG signal Acquisition',
-        'Human - Machine Interaction',
-        'Motor Control',
-      ],
-    },
-  },
-  {
-    slug: 'ball-balancing-robot',
-    title: 'Ball Balancing Robot',
-    summary:
-      'Self-balancing robot with PID control for real-time stability on a spherical wheel.',
-    category: 'academic',
-    images: [
-      {src: '/img/portfolio/ballbot2.jpeg'},
-      {src: '/img/portfolio/ballbot.jpeg'},
-    ],
-    organization: 'GCOEARA',
-    year: '2022',
-    // tags: [ 'Real-time control system', 'PID Control', 'Sensor Integration', 'Electromechanical Integration'],
-    tags: ['Control Systems', 'PID Control', 'IMU', 'Real-Time Systems', 'Motion Control'
-    ],
-    overview:
-      'The Ball Balancing Robot is a dynamically stable mobile robot that balances on a single spherical wheel using real-time feedback control. Developed as an interdisciplinary project between the Instrumentation & Control and Automobile Engineering departments, it demonstrated the practical implementation of embedded control systems for unstable dynamic platforms.',
-   role: [
-      'Led an interdisciplinary team of eight students and was responsible for the robot’s embedded software, control system implementation, IMU integration, controller tuning, system integration, and experimental validation.',
-    ],
-    engineeringHighlights: [
-      'Implemented a real-time PID feedback controller for dynamic balancing.',
-      'Integrated IMU sensing with embedded motion control.',
-      'Tuned controller parameters through iterative testing and experimental validation.',
-      'Developed firmware for sensor acquisition, actuator control, and system coordination.',
-      'Integrated mechanical, electronic, and embedded subsystems into a functional prototype.',
-    ],
-    challenges: [
-      'Achieving stable balancing required carefully tuning the controller while accounting for sensor noise, actuator response, and the nonlinear dynamics of an inherently unstable system. Coordinating software development with evolving mechanical design added further complexity throughout the project.',
-    ],
-    impact: [
-      'Successfully demonstrated stable real-time balancing on a single spherical wheel.',
-      'Delivered a complete interdisciplinary robotic system from concept to prototype.',
-      'Strengthened collaboration between Instrumentation & Control and Automobile Engineering teams.',
-    ],
-   learnings: [
-      'This project taught me how theoretical control concepts translate into real-world embedded systems. Leading an interdisciplinary team also strengthened my ability to coordinate technical work, make engineering decisions, and iterate rapidly through experimentation until the system achieved reliable performance.',
-    ],
-    technologies: {
-      languages: ['C', 'Embedded C'],
-      microcontrollers: ['STM32 ARM Cortex-M'],
-      protocols: ['ADC', 'DMA', 'GPIO', 'Timers', 'PWM'],
-      tools: ['HAL', 'CMSIS', 'Git', 'Oscilloscope', 'Logic Analyzer', 'ST Link'],
-      concepts: [
-        'Real-time control system',
-        'PID Control',
-        'Sensor Integration',
-        'Electromechanical Integration',
       ],
     },
   },

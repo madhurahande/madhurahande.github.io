@@ -197,6 +197,7 @@ gap:1.5rem;
 
 margin-top:2rem;
 
+margin-bottom:2rem;
 }
 
 .interest-card{
@@ -205,11 +206,15 @@ padding:1.6rem;
 
 transition:.25s;
 
+margin-bottom:2rem;
+
 }
 
 .interest-card:hover{
 
 transform:translateY(-5px);
+
+margin-bottom:2rem;
 
 }
 
@@ -217,13 +222,13 @@ transform:translateY(-5px);
 
 font-size:2rem;
 
-margin-bottom:.8rem;
+margin-bottom:2.8rem;
 
 }
 
 .interest-card h3{
 
-margin-bottom:.6rem;
+margin-bottom:2.6rem;
 
 }
 
@@ -233,13 +238,21 @@ color:var(--text-muted);
 
 line-height:1.7;
 
+margin-bottom:2rem;
+
+}
+
+.interest-section{
+    margin-top:3rem;
+    padding-top:3rem;
+    border-top:1px solid var(--border);
 }
 
 .rangoli{
 
 margin-bottom:2rem;
 
-padding:1.8rem;
+padding:2rem;
 
 }
 
@@ -255,36 +268,38 @@ align-items:center;
 
 }
 
-.rangoli-gallery{
+/* .rangoli-gallery{
 
 display:grid;
 
-grid-template-columns:1fr 1fr 1fr;
+grid-template-columns:1fr 1fr 1fr 1fr;
 
 gap:.75rem;
 
+} */
+ .rangoli-gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:1rem;
 }
 
-.rangoli-gallery img{
-
-width:100%;
-
-aspect-ratio:1;
-
-object-fit:cover;
-
-border-radius:12px;
-
-transition:.3s;
-
-cursor:pointer;
-
+.rangoli-gallery img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 0 auto;
+    transition:transform .25s ease, box-shadow .25s ease;
 }
-
+/* .rangoli-gallery img{
+    width:100%;
+    aspect-ratio:1;
+    object-fit:cover;
+    border-radius:12px;
+} */
 .rangoli-gallery img:hover{
-
-transform:scale(1.04);
-
+    transform:scale(1.04);
+    box-shadow:0 12px 24px rgba(0,0,0,.12);
 }
 
 @media(max-width:900px){
@@ -292,13 +307,22 @@ transform:scale(1.04);
 .rangoli-content{
 
 grid-template-columns:1fr;
-
+grid-template-rows:1fr;
 }
 
+.rangoli-gallery{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:.75rem;
+
+}
 }
 
 .hero-stats span a {
-  color: accent;
+  color: var(--accent);
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -308,3 +332,149 @@ grid-template-columns:1fr;
   text-decoration: underline;
 }
 
+.books-grid,
+.poetry-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+@media (max-width: 1024px) {
+  .books-grid,
+  .poetry-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .books-grid,
+  .poetry-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.book-card,
+.poem-card {
+  padding: 1.5rem;
+  min-height: 250px;      /* matches image height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.book-card:hover,
+.poem-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+.book-card h3,
+.poem-card h3 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.book-author {
+  margin: .35rem 0 1rem;
+  color: var(--accent);
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+.book-card p,
+.poem-card p {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+.books,
+.poetry{
+    margin-bottom:2rem;
+    padding:1.8rem;
+}
+
+.books-content,
+.poetry-content{
+    display:grid;
+    gap:1.5rem;
+}
+.books-grid,
+.poetry-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1rem;
+}
+.book-card,
+.poem-card{
+    background:var(--bg-muted);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:1.2rem;
+    transition:.25s;
+}
+
+.book-card:hover,
+.poem-card:hover{
+    transform:translateY(-4px);
+}
+
+.book-card h4,
+.poem-card h4{
+    margin:0 0 .4rem;
+}
+
+.book-card span{
+    display:block;
+    color:var(--accent);
+    font-size:.85rem;
+    margin-bottom:.8rem;
+}
+
+.book-card p,
+.poem-card p{
+    color:var(--text-muted);
+    font-size:.95rem;
+    line-height:1.7;
+}
+@media (max-width:900px){
+
+    .books-grid,
+    .poetry-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media (max-width:600px){
+
+    .books-grid,
+    .poetry-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+.book-link {
+  margin-top: auto;
+  display: inline-block;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: .9rem;
+}
+
+.book-link:hover {
+  text-decoration: underline;
+}
+
+.interest-title {
+  margin: 0 0 0.75rem;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.interest-description {
+  margin: 0 0 2rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  /* max-width: 100%; */
+}

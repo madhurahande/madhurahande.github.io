@@ -1,5 +1,6 @@
-
 ---
+import { books, poem } from "../data/beyond";
+
 const interests = [
   {
     icon: "",
@@ -11,70 +12,107 @@ const interests = [
 ];
 ---
 
+
 <section class="section" id="beyond-engineering">
+  <div class="container">
 
-<div class="container">
+    <div class="section-header">
+      <p class="section-label">Beyond Engineering</p>
 
-<div class="section-header">
+      <h2 class="section-title">
+        Curiosity extends beyond technology.
+      </h2>
 
-<p class="section-label">
+      <p class="section-subtitle">
+      Engineering is an important part of who I am, and so are the interests that shape how I observe, learn, and create.
+      </p>
+    </div>
 
-Beyond Engineering
+    <!-- Rangoli -->
+    <div class="rangoli card">
 
-</p>
+      <div class="section-content">
+        <h3 class="interest-title">Rangoli</h3>
 
-<h2 class="section-title">
+        <p class="interest-description">
+          Rangoli is one of my favorite creative pursuits. I enjoy transforming simple geometric patterns into intricate designs, where every composition is guided by symmetry, balance, and attention to detail. It is a practice that encourages patience, careful observation, and an appreciation for the creative process itself.
+        </p>
+      </div>
 
-Curiosity extends beyond technology.
 
-</h2>
+        <div class="rangoli-gallery">
+         
+        <img src="/img/rangoli/r1.jpeg" alt="Rangoli design">
 
-<p class="section-subtitle">
+        <img src="/img/rangoli/r2.jpeg" alt="Rangoli design">
 
-Many of the qualities I value as an engineer—creativity, patience, curiosity and continuous learning—are also shaped by the interests I pursue outside the lab.
+        <img src="/img/rangoli/r6.jpeg" alt="Rangoli design">
 
-</p>
+        <img src="/img/rangoli/r9.jpeg" alt="Rangoli design">
 
-</div>
+        </div>
 
-<!-- Rangoli -->
+      </div>
 
-<div class="rangoli card">
 
-<div class="rangoli-content">
+    <!-- Books -->
+    <div class="books card">
 
-<div>
+      <div class="section-content">
+        <h3 class="interest-title">Books That Stayed With Me</h3>
 
-<h3>🎨 Rangoli</h3>
+        <p class="interest-description">
+          Books that shaped my thinking and continue to stay with me long after I finished reading them.
+        </p>
+      </div>
 
-<p>
+        <div class="books-grid">
+          {books.map((book) => (
+           <a
+            href={book.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="book-card"
+          >
+            <h4>{book.title}</h4>
+            <span class="book-author">{book.author}</span>
+            <p>{book.reflection}</p>
+          </a>
+          ))}
+        </div>
 
-Designing rangoli has taught me that creativity and precision often go hand in hand. Every design begins with symmetry, planning and iteration—the same mindset I enjoy bringing to solve engineering problems.
+      </div>
 
-</p>
 
-</div>
+    <!-- Poetry -->
+    <div class="poetry card">
 
-<div class="rangoli-gallery">
+      <div class="section-content">
+        <h3 class="interest-title">Poetry</h3>
 
-<img src="/img/rangoli/r1.jpeg" alt="Rangoli design">
+        <p class="interest-description">
+          A few poems that I revisit for their language, perspective and timeless ideas.
+        </p>
+      </div>
 
-<img src="/img/rangoli/r2.jpeg" alt="Rangoli design">
+        <div class="poetry-grid">
+          {poem.map((item) => (
+            <a
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="poem-card"
+            >
+              <h4>{item.title}</h4>
+              <span class="book-author">{item.author}</span>
+              <p>{item.reflection}</p>
+            </a>
+          ))}
+        </div>
 
-<img src="/img/rangoli/r4.jpeg" alt="Rangoli design">
+      </div>
 
-<img src="/img/rangoli/r5.jpeg" alt="Rangoli design">
+    </div>
 
-<img src="/img/rangoli/r6.jpeg" alt="Rangoli design">
-
-<img src="/img/rangoli/r7.jpeg" alt="Rangoli design">
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
+  </div>
 </section>
