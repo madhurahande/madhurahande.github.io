@@ -9,7 +9,7 @@ export const site = {
   location: 'Pune, Maharashtra, India',
   address: 'Pune, Maharashtra, India - 411037',
   linkedin: 'https://www.linkedin.com/in/madhura-hande-deshmukh/',
-  resumePath: '/resume.pdf',
+  resumePath: '/Madhura_Hande-Resume.pdf',
   formspreeEndpoint: 'https://formspree.io/f/xknajvjn',
   profileImage: '/img/Profile.jpg',
   heroTagline: 'Embedded Systems Engineer  |   Critical Care Devices',
@@ -58,10 +58,11 @@ export const site = {
 };
 
 export const navLinks = [
-  { href: '#about', label: 'About' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#experience', label: 'Engineering Journey' },
-  { href: '#beyond-engineering', label: 'Beyond Engineering' },
-  { href: '#contact', label: 'Contact' },
+  // { href: '/', label: 'Home' },
+  { href: '/#about', label: 'About' },
+  { href: '/#projects', label: 'Projects' },
+  { href: '/#experience', label: 'Engineering Journey' },
+  { href: '/#beyond-engineering', label: 'Beyond Engineering' },
+  { href: '/#contact', label: 'Contact' },
 ];
 

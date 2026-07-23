@@ -256,11 +256,11 @@ export const projects: Project[] = [
     category: 'academic',
     images: [
       {src: '/img/portfolio/bionichand0.png'},
-      {src: '/img/portfolio/Robotic_hand3.jpeg'},
+      // {src: '/img/portfolio/Robotic_hand3.jpeg'},
     ],
     organization: 'GCOEARA',
     year: '2022',
-    tags: ['Embedded system', 'Biomedical signal processing', 'EMG signal Acquisition', 'Human - Machine Interaction', 'Motor Control'],
+    tags: ['Embedded system', 'Biomedical signal processing', 'Human - Machine Interaction'],
     overview:
     "The Robotic Hand Prosthesis is a proof-of-concept assistive device that demonstrates how embedded systems can translate human muscle activity into physical movement. Using EMG (Electromyography) signals acquired from the forearm, the system controls a robotic hand in real time, showcasing the integration of biomedical sensing, embedded firmware, and electromechanical actuation.",
     role:[ 

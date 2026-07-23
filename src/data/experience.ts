@@ -311,34 +311,92 @@ export const journey: JourneyItem[] = [
 
 ];
 
+// export const skillGroups = [
+//   {
+//     title: 'Programming',
+//     skills: ['Embedded C', 'C/C++', 'Python', 'RTOS'],
+//   },
+//   {
+//     title: 'Hardware & Platforms',
+//     skills: ['STM32', 'ATmega', 'MSP430'], // 'PCB Design (Altium, Eagle)', 'Sensors & Actuators'],
+//   },
+//   {
+//     title: 'Operating Systems & RTOS',
+//     skills: ['Linux', 'Windows', 'MSP430', ' FreeRTOS', ' CMSIS-RTOS', ' bare-metal development'],
+//   },
+//   {
+//     title: 'Design & Integration',
+//     skills: ['PCB design', 'MotorDrivers', 'Pneumatic Actuators', ' PID control', 'Control System'],
+//   },
+//   {
+//     title: 'Communication Protocols',
+//     skills: ['SPI', 'I2C', 'UART', 'CAN', 'USB', 'RS485', 'One-wire'],
+//   },
+//   {
+//     title: 'Interfaces',
+//     skills: ['ADC', 'DAC', 'DMA', 'PWM', 'Timers', 'GPIO', 'interrupts'],
+//   },
+//   {
+//     title: 'Domain',
+//     skills: ['Medical Devices', 'Robotics', 'Real-time Systems'],
+//   },
+// ];
+
 export const skillGroups = [
   {
     title: 'Programming',
-    skills: ['Embedded C', 'C/C++', 'Python', 'RTOS'],
+    skills: ['Embedded C', 'C', 'C++', 'Python'],
   },
   {
-    title: 'Hardware & Platforms',
-    skills: ['STM32', 'ATmega', 'MSP430'], // 'PCB Design (Altium, Eagle)', 'Sensors & Actuators'],
+    title: 'Microcontrollers',
+    skills: ['STM32 (Cortex-M)', 'MSP430', 'ATmega'],
   },
   {
-    title: 'Operating Systems & RTOS',
-    skills: ['Linux', 'Windows', 'MSP430', ' FreeRTOS', ' CMSIS-RTOS', ' bare-metal development'],
+    title: 'Embedded Systems',
+    skills: ['Bare-metal', 'FreeRTOS', 'STM32 HAL', 'CMSIS'],
   },
   {
-    title: 'Design & Integration',
-    skills: ['PCB design', 'MotorDrivers', 'Pneumatic Actuators', ' PID control', 'Control System'],
+    title: 'Operating Systems',
+    skills: ['Wiindows', 'Linux'],
   },
   {
-    title: 'Communication Protocols',
-    skills: ['SPI', 'I2C', 'UART', 'CAN', 'USB', 'RS485', 'One-wire'],
+    title: 'Communication',
+    skills: ['UART', 'SPI', 'I²C', 'CAN', 'USB', 'RS485', '1-Wire'],
   },
   {
-    title: 'Interfaces',
-    skills: ['ADC', 'DAC', 'DMA', 'PWM', 'Timers', 'GPIO', 'interrupts'],
+    title: 'Peripherals',
+    skills: ['ADC', 'DAC', 'DMA', 'PWM', 'Timers', 'GPIO', 'Interrupts'],
   },
   {
-    title: 'Domain',
-    skills: ['Medical Device', 'Robotics', 'Real-time Systems'],
+    title: 'Hardware & Control',
+    skills: [
+      'PCB Design',
+      'Motor Drivers',
+      'PID Control',
+      'Control Systems',
+      'Pneumatic Actuators',
+    ],
+  },
+  {
+    title: 'Development Tools',
+    skills: [
+      'Keil µVision',
+      'STM32CubeMX',
+      'VS Code',
+      'Code Composer Studio',
+      'Eagle',
+      'Git',
+    ],
+  },
+  {
+    title: 'Debugging Tools',
+    skills: [
+      'Oscilloscope',
+      'Logic Analyzer',
+      'ST-Link',
+      'JTAG',
+      'Multimeter',
+    ],
   },
 ];
 
